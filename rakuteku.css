@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+body, html {
+  height: 100%;
+  font-family: "ZCOOL XiaoWei", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 481px) {
+ p#logo {
+   font-size:36px;!important
+ }
+
+  p#bhour {
+   font-size:16px;!important
+ }
+
+  p#address {
+   font-size:14px;!important
+ }
+
+   p#copyright {
+   font-size:12px;!important
+ }
+}
