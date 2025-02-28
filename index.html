@@ -1,320 +1,72 @@
 <!DOCTYPE html>
 <html>
-<title>Refreshing Ramen</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1mdBRiAVqlki54r3e5b5m3H121WEBzTeL">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei">
-
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/rakuteku.css">
+</head>
 <body>
+  <!--NAVBAR-->
+  <nav>
+    <div class="logo">
+      <img src="/img/logoFavIcon.png" alt="logo" />
+      <h1>RAKUTEKU</h1>
+    </div>
+    <ul>
+      <li>
+        <a href="#">ホーム</a>
+      </li>
+      <li>
+        <a href="#">会社概要</a>
+      </li>
+      <li>
+        <a href="#">商品一覧</a>
+      </li>
+      <li>
+        <a href="#">お問い合わせ</a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </nav>
+  <div class="menubar">
+    <ul>
+      <li>
+        <a href="#">ホーム</a>
+      </li>
+      <li>
+        <a href="#">会社概要</a>
+      </li>
+      <li>
+        <a href="#">商品一覧</a>
+      </li>
+      <li>
+        <a href="#">お問い合わせ</a>
+      </li>
+    </ul>
+  </div>
 
-<!-- Links (sit on top) -->
-<div class="w3-top">
-  <div class="w3-row w3-padding w3-black">
-    <div class="w3-col" style="width:20%">
-      <a href="#" class="w3-button w3-block w3-black">ホーム</a>
-    </div>
-    <div class="w3-col" style="width:20%">
-      <a href="#about" class="w3-button w3-block w3-black">材料</a>
-    </div>
-    <div class="w3-col" style="width:20%">
-      <a href="#menu" class="w3-button w3-block w3-black">メニュー</a>
-    </div>
-    <div class="w3-col" style="width:20%">
-      <a href="#where" class="w3-button w3-block w3-black">住所</a>
-    </div>
-    <div class="w3-col" style="width:20%">
-      <a href="https://script.google.com/macros/s/AKfycbyLsSyjJ5VYoAxTags-AOX05N-oSu6QCCoTpXTicoL3gkqAqE-AVEi6kCC9yOOyPLki8Q/exec" class="w3-button w3-block w3-black">English</a>
+  <!--HERO-->
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:2rem">RAKUTEKU</h1>
+      <p>ハイテクな商品は高いわけじゃない</p>
+      <button>商品一覧</button>
     </div>
   </div>
-</div>
 
-<!-- Header with image -->
-<header class="bgimg w3-display-container" id="home">
-  <div class="w3-display-bottomleft w3-center" style="padding:5px">
-    <p id="bhour" class="w3-text-white">月曜日～土曜日<br>１１時ー２０時</p>
-  </div>
-  <div class="w3-display-middle w3-jumbo w3-center">
-    <p id="logo" class="w3-text-white">リフレッシュ<br>ラーメン</p>
-  </div>
-  <div class="w3-display-bottomright w3-center">
-    <div class="w3-col l3 m6" style="padding:5px">
-<img src="https://drive.google.com/uc?export=view&id=12kL5sRAr-PWhaRSXzSmfY74kJ4gjroF3" style="width:75px">
-</div>
-  </div>
-</header>
-
-<!-- Add a background color and large text to the whole page -->
-<div class="w3-sand w3-large">
-
-<!-- About Container -->
-<div class="w3-container" id="about">
-  <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">材料について</span></h5>
-    <p>キタラボのラーメンは北海道製の小麦で作られる！</p>
-    
-    <div class="w3-panel w3-leftbar w3-light-grey w3-row">
-    
-    <div class="w3-col w3-third w3-center">
-    <img src="https://drive.google.com/uc?export=view&id=1oADpwnW93SuxxLYc4chtaBIy-W4iWcZX" alt="Ken" style="width:66.66%; padding:10px" class="w3-circle"></div>
-    
-    <div class="w3-col w3-twothird">
-      <p><i>"美味しいラーメンを食べながら北海道の経済を支援しましょう！"</i></p>
-      <p>チェフ・オーナー: <strong>研生　阿部</strong></p></div>
-    </div>
-    
-    <img src="https://images.pexels.com/photos/5907896/pexels-photo-5907896.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:100%;max-width:1000px" >
-  </div>
-</div>
-
-<!-- Menu Container -->
-<div class="w3-container" id="menu">
-  <div class="w3-content" style="max-width:700px">
- 
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">メニュー</span></h5>
-  
-    <div class="w3-row w3-center w3-card w3-padding">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
-        <div class="w3-col s6 tablink">食品</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
-        <div class="w3-col s6 tablink">ドリンク</div>
-      </a>
-    </div>
-
-            <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
-            
-            <div class="w3-col l3 m6 w3-margin-bottom" style="padding:0px 5px 0px 0px;">
-          <div class="w3-card w3-container w3-padding w3-center">
-         <img src="https://drive.google.com/uc?export=view&id=1Pi2gHxSSySnzx82zmkcchsUZgVp8zH1t" style="width:100%" class="center">
-            <div class="w3-container">
-            <h3>豚骨ラーメン</h3>
-            <p>￥560</p>
-          </div>
-      </div>
-    </div>
-            <div class="w3-col l3 m6 w3-margin-bottom" style="padding:0px 5px 0px 0px;">
-          <div class="w3-card w3-container w3-padding">
-            <img src="https://drive.google.com/uc?export=view&id=11O0VETkknhlFFaE4xuUGK_OiQEMXfyC0" style="width:100%" class="center">
-            <div class="w3-container w3-center">
-            <h3>ジャージャー麵</h3>
-            <p>￥480</p>
-          </div>
-      </div>
-    </div>
-    
-
-  <div class="w3-col l3 m6 w3-margin-bottom" style="padding:0px 5px 0px 0px;">
-          <div class="w3-card w3-container w3-padding">
-            <img src="https://drive.google.com/uc?export=view&id=154wPu9n3ZQDRXdtLWeSydg1Iwgx4bXW9" style="width:100%" class="center">
-            <div class="w3-container w3-center">
-            <h3>焼きそば</h3>
-            <p>￥480</p>
-          </div>
-      </div>
-    </div>
-    
-            <div class="w3-col l3 m6 w3-margin-bottom" style="padding:0px 5px 0px 0px;">
-          <div class="w3-card w3-container w3-padding w3-center">
-            <img src="https://drive.google.com/uc?export=view&id=1EM3uJr0gXMpdkY0XjgO60InWvDu-OMyq" style="width:100%" class="center">
-            <div class="w3-container">
-            <h3>グリーンラーメン</h3>
-            <p>￥640</p>
-          </div>
-      </div>
-    </div>
-    </div>
-
-    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
-    
-<div class="w3-col l3 m6 w3-margin-bottom" style="padding:0px 5px 0px 0px;">
-         <div class="w3-card w3-container w3-padding w3-center">
-         <img src="https://drive.google.com/uc?export=view&id=1rVX8hCIu6xkYsvx5glF_K0_QuQX2aYNC" style="width:100%" class="center">
-            <div class="w3-container">
-            <h3>抹茶</h3>
-            <p>￥120</p>
-          </div>
-      </div>
-    </div>
-    
-                <div class="w3-col l3 m6 w3-margin-bottom" style="padding:0px 5px 0px 0px;">
-          <div class="w3-card w3-container w3-padding w3-center">
-            <img src="https://drive.google.com/uc?export=view&id=1h-ohuE8UeOiRxKH4TTxa-SQ7GI5mNQac" style="width:100%" class="center">
-            <div class="w3-container">
-            <h3>抹茶ソフト</h3>
-            <p>￥220</p>
-          </div>
-      </div>
-    </div>
-    
-                <div class="w3-col l3 m6 w3-margin-bottom" style="padding:0px 5px 0px 0px;">
-          <div class="w3-card w3-container w3-padding w3-center">
-            <img src="https://drive.google.com/uc?export=view&id=1lROesDTIgd2wsdQEL9DL6UUhq4QuXFV6" style="width:100%" class="center">
-            <div class="w3-container">
-            <h3>抹茶ミルク</h3>
-            <p>￥220</p>
-          </div>
-      </div>
-    </div>
-    
-    </div>  
-  </div>
-</div>
-
-<!-- Contact/Area Container -->
-<div class="w3-container" id="where" style="padding-bottom:32px;">
-  <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">キタラーメンの店</span></h5>
-    <p class="w3-center">🏣０００－０００北海道札幌市北区北○○条西○○</p>
-    <img src="https://drive.google.com/uc?export=view&id=13U5PxFPLaF8NB4smU0RKynVF7CgrRUrV" class="w3-image" style="width:100%;">
-    <p><span class="w3-tag">FYI!</span> アプリの配送はもちろん、コロナが落ち着いてからイートインもかのうです！ご来店の前にオンラインで予約できます！</p>
-    <p>座席を<strong>予約</strong></p>
-    <form class="gform" action="https://script.google.com/macros/s/AKfycbzgdhZ76E2O9KIrSQrhMw-BKsnljdP-wv6jDVfthovU0vrmPgspB87R29awdCKwVdLb/exec" target="_blank" method="POST" data-email="jason@kitalabs.com">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="お名前" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="何名様でしょうか" required name="People"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value=NOW()></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="メッセージ" required name="Message"></p>
-      <p><button class="w3-button w3-black" type="submit">今すぐ予約</button></p>
-      <div style="display:none" class="thankyou_message">
- <!-- You can customize the thankyou message by editing the code below -->
- <h2>ご連絡ありがとうございました、お返事をお待ちください。
- </h2>
-</div>
-    </form>
-  </div>
-</div>
-
-<!-- End page content -->
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-  <p>Copyright @2021 <a href="https://kitalabs.com" title="W3.CSS" target="_blank" class="w3-hover-text-green">Kitalabs 株式会社</a></p>
-</footer>
-
-<script>
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-}
-document.getElementById("myLink").click();
-(function() {
-  // get all data in form and return object
-  function getFormData(form) {
-    var elements = form.elements;
-    var honeypot;
-
-    var fields = Object.keys(elements).filter(function(k) {
-      if (elements[k].name === "honeypot") {
-        honeypot = elements[k].value;
-        return false;
-      }
-      return true;
-    }).map(function(k) {
-      if(elements[k].name !== undefined) {
-        return elements[k].name;
-      // special case for Edge's html collection
-      }else if(elements[k].length > 0){
-        return elements[k].item(0).name;
-      }
-    }).filter(function(item, pos, self) {
-      return self.indexOf(item) == pos && item;
-    });
-
-    var formData = {};
-    fields.forEach(function(name){
-      var element = elements[name];
-      
-      // singular form elements just have one value
-      formData[name] = element.value;
-
-      // when our element has multiple items, get their values
-      if (element.length) {
-        var data = [];
-        for (var i = 0; i < element.length; i++) {
-          var item = element.item(i);
-          if (item.checked || item.selected) {
-            data.push(item.value);
-          }
-        }
-        formData[name] = data.join(', ');
-      }
-    });
-
-    // add form-specific values into the data
-    formData.formDataNameOrder = JSON.stringify(fields);
-    formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
-    formData.formGoogleSendEmail
-      = form.dataset.email || ""; // no email by default
-
-    return {data: formData, honeypot: honeypot};
-  }
-
-  function handleFormSubmit(event) {  // handles form submit without any jquery
-    event.preventDefault();           // we are submitting via xhr below
-    var form = event.target;
-    var formData = getFormData(form);
-    var data = formData.data;
-
-    // If a honeypot field is filled, assume it was done so by a spam bot.
-    if (formData.honeypot) {
-      return false;
-    }
-
-    disableAllButtons(form);
-    var url = form.action;
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', url);
-    // xhr.withCredentials = true;
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          form.reset();
-          var formElements = form.querySelector(".form-elements")
-          if (formElements) {
-            formElements.style.display = "none"; // hide form
-          }
-          var thankYouMessage = form.querySelector(".thankyou_message");
-          if (thankYouMessage) {
-            thankYouMessage.style.display = "block";
-          }
-        }
+  <script>
+    const mobileNav = document.querySelector(".hamburger");
+    const navbar = document.querySelector(".menubar");
+    const toggleNav = () => {
+      navbar.classList.toggle("active");
+      mobileNav.classList.toggle("hamburger-active");
     };
-    // url encode form data for sending as post data
-    var encoded = Object.keys(data).map(function(k) {
-        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-    }).join('&');
-    xhr.send(encoded);
-  }
-  
-  function loaded() {
-    // bind to the submit event of our form
-    var forms = document.querySelectorAll("form.gform");
-    for (var i = 0; i < forms.length; i++) {
-      forms[i].addEventListener("submit", handleFormSubmit, false);
-    }
-  };
-  document.addEventListener("DOMContentLoaded", loaded, false);
-
-  function disableAllButtons(form) {
-    var buttons = form.querySelectorAll("button");
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].disabled = true;
-    }
-  }
-})();
-</script>
-
+    mobileNav.addEventListener("click", () => toggleNav());
+  </script>
 </body>
 </html>
-
