@@ -4,6 +4,7 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #303D35;
 }
 * {
   box-sizing: border-box;
@@ -16,6 +17,14 @@ a {
 }
 ul li {
   list-style-type: none;
+}
+.title {
+  width: 100%;
+  font-size: 2rem;
+  color: white;
+  margin: 3rem auto 0.5rem auto;
+  display: flex;
+  justify-content: center;
 }
 
 /*NAVBAR*/
@@ -131,14 +140,6 @@ nav ul li a:hover {
 .menubar ul li a:hover {
   background-color: #f5f5f5;
 }
-@media screen and (max-width: 790px) {
-  .hamburger {
-    display: block;
-  }
-  nav ul {
-    display: none;
-  }
-}
 
 /*hero*/
   .hero-image {
@@ -171,3 +172,190 @@ nav ul li a:hover {
     background-color: #555;
     color: white;
   }
+
+  /*CONTENT*/
+  .cont {
+    display: flex;
+    flex-direction:row;
+    width:100%;
+    max-width:790px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .cont .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 25%;
+    max-width: 200px;
+    position: relative; 
+  }
+  .cont .item .item-img img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1; 
+      object-fit: cover;
+      display: block; 
+      border-radius: 5px;
+  }
+  .cont .item .item-tit {
+      position: absolute;
+      bottom: 25%; 
+      left: 50%;
+      transform: translateX(-50%); 
+      color: white;
+      font-weight: 500;
+      font-size: 1rem;
+      background: rgba(0, 0, 0, 0.6); 
+      padding: 5px 10px; 
+      border-radius: 5px; 
+      text-align: center;
+      z-index: 2; 
+      width: max-content; 
+  }
+  .cont .item .item-but {
+    color: white;
+    padding:0.25rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    background-color: #4daf51;
+    opacity: 0.81;
+    border-radius: 5px;
+  }
+  
+  /*FOOTER*/
+  footer {
+    background-color: #121315;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  footer * {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+  footer .row {
+    padding: 2em 1em;
+  }
+  footer .row.primary {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: stretch;
+  }
+  footer .column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    min-height: 15em;
+  }
+  footer h3 {
+    width: 100%;
+    text-align: left;
+    color: #4daf51;
+    font-size: 1.6em;
+    white-space: nowrap;
+  }
+  footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  footer li:not(:first-child) {
+    margin-top: 0.8em;
+  }
+  footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  footer ul li a:hover {
+    color: #4daf51;
+  }
+  footer .about p {
+    text-align: justify;
+    line-height: 2;
+    margin: 0;
+  }
+  footer input,
+  footer button {
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  footer button {
+    background-color: #4daf51;
+    color: #ffffff;
+  }
+  footer div.social {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.4em;
+    flex-direction: row;
+    margin-top: 0.5em;
+  }
+  footer .social i:hover {
+    color: #2a8ded;
+  }
+  footer .row.secondary {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .row.secondary i {
+    font-size: 1.8em;
+    color: #4daf51;
+  }
+  footer .row.secondary div {
+    padding: 1em 0;
+    width: 100%;
+  }
+  footer .row.secondary div:hover {
+    background-color: #25262e;
+  }
+  footer .copyright {
+    padding: 0.3em 1em;
+    background-color: #25262e;
+  }
+  footer .copyright p {
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 790px) {
+    /*NAVBAR*/
+    .hamburger {
+      display: block;
+    }
+    nav ul {
+      display: none;
+    }
+    /*HERO*/
+    .hero-image {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/img/cover-sumaho.png");
+    }
+
+    /*CONTENT*/
+    .cont .item {width:33%;}
+    .cont .item .item-tit, .cont .item .item-but {font-size: 0.72rem}
+
+    /*FOOTER*/
+    footer .row.primary {
+      display: block;
+    }
+    footer .row.secondary {
+      flex-direction: column;
+    }
+
+  }
+
+
