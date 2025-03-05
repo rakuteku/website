@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/rakuteku.css">
+  <link rel="icon" type="image/png" href="/img/logoFavIcon.png">
 </head>
 <body>
   <!--NAVBAR-->
@@ -104,6 +105,40 @@
     </div>
   </div>
 
+  <!--CONTACT US-->
+  <div class="floating-container">
+    <button class="floating-btn" onclick="openModal()">
+        <img src="/img/iconPhone.png" alt="Custom Icon">
+        <div class="floating-text">お問い合わせ</div>
+    </button>
+  </div>
+  <div class="modal" id="modal" onclick="closeModal(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+          <span class="close-btn" onclick="closeModal(event)">X</span>
+          <h2 style="color:white">お問い合わせ</h2>
+          <div class="modal-body">
+              <div>
+                  <a href="https://line.me/ti/p/YKtb301rPt" target="_blank">
+                      <img src="/img/lineqr.jpg" alt="LINE QR Code">
+                      <p>LINE</p>
+                  </a>
+              </div>
+              <div>
+                  <a href="tel:+8105071088235">
+                    <img src="/img/iconPhone.png" alt="toiawaseDenwa" style="width: 42px; height:42px">
+                      <p>05071088235</p>
+                  </a>
+              </div>
+              <div>
+                  <a href="mailto:support@rakuteku.com">
+                    <img src="/img/iconEmail.png" alt="toiawaseMeru" style="width: 42px; height:42px">
+                    <p>support@rakuteku.com</p>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+
   <!--FOOTER-->
   <footer>
     <div class="row primary" style="max-width:1080px; margin: auto;">
@@ -146,19 +181,14 @@
       </div>
     </div>
     <div class="row secondary" style="max-width:1080px; margin: auto;">
-      <div>
-        <p>
-          <i class="fas fa-phone-alt"></i>
-        </p>
-        <p>+81 050-7108-8235</p>
+      <div class="custIconCont">
+          <i class="custIcon" style=" background-image: url('/img/iconPhone.png'); "></i>&nbsp;+81 050-7108-8235
       </div>
-      <div>
-        <p><i class="fas fa-envelope"></i></p>
-        <p>support@rakuteku.com</p>
+      <div class="custIconCont">
+        <i class="custIcon" style=" background-image: url('/img/iconEmail.png'); "></i>&nbsp;support@rakuteku.com
       </div>
-      <div>
-        <p><i class="fas fa-map-marker-alt"></i></p>
-        <p>札幌市中央区南５条西１５丁目２－３－５０３</p>
+      <div class="custIconCont">
+        <i class="custIcon" style=" background-image: url('/img/iconAddress.png'); "></i>&nbsp;札幌市中央区南５条西１５丁目２－３－５０３
       </div>
     </div>
     <div class="row copyright">
@@ -174,6 +204,14 @@
       mobileNav.classList.toggle("hamburger-active");
     };
     mobileNav.addEventListener("click", () => toggleNav());
+
+    function openModal() {
+      document.getElementById("modal").style.display = "flex";
+    }
+        
+    function closeModal(event) {
+      document.getElementById("modal").style.display = "none";
+    }
   </script>
 </body>
 </html>
