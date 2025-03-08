@@ -36,7 +36,14 @@ nav {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   z-index: 1;
-  background-color: #000;
+  background-color: transparent; 
+  position: fixed; 
+  width: 100%; 
+  top: 0; 
+  transition: background-color 0.3s ease; 
+}
+nav.scrolled {
+  background-color: #000; 
 }
 nav .logo {
   display: flex;
@@ -49,12 +56,12 @@ nav .logo img {
 }
 nav .logo h1 {
   font-size: 1.1rem;
-  color: #4daf51
+  color: #4daf51;
 }
 nav ul {
   list-style: none;
   display: flex;
-  background-color: #000;
+  background-color: transparent; /* Remove background color */
 }
 nav ul li {
   margin-left: 1.5rem;
@@ -100,18 +107,18 @@ nav ul li a:hover {
 .hamburger-active .line:nth-child(3) {
   transform: translateY(-5px) rotate(90deg);
 }
-
 .menubar {
-  position: absolute;
+  position: fixed; 
   top: 0;
   left: -60%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 60%;
-  height: 100vh;
-  padding: 10% 0;
-  background: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  height: 100vh; 
+  padding: 20% 0;
+  background: #4daf51;
+  opacity:0.9;
   transition: all 0.5s ease-in;
   z-index: 2;
 }
@@ -119,7 +126,6 @@ nav ul li a:hover {
   left: 0;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-
 .menubar ul {
   padding: 0;
   list-style: none;
@@ -127,7 +133,6 @@ nav ul li a:hover {
 .menubar ul li {
   margin-bottom: 32px;
 }
-
 .menubar ul li a {
   text-decoration: none;
   color: #fff;
@@ -136,10 +141,10 @@ nav ul li a:hover {
   padding: 5px 10px;
   border-radius: 5px;
 }
-
 .menubar ul li a:hover {
   background-color: #f5f5f5;
 }
+
 
 /*hero*/
   .hero-image {
@@ -277,7 +282,7 @@ nav ul li a:hover {
   align-items: center;
 }
 .modal-content {
-  background: rgba(0,0,0,0.81);
+  background: #4daf51;
   padding: 20px;
   border-radius: 8px;
   max-width: 1080px;
@@ -428,7 +433,7 @@ nav ul li a:hover {
     background-size: cover;
   }
 
-  @media screen and (max-width: 790px) {
+  @media screen and (max-width: 768px) {
     /*NAVBAR*/
     .hamburger {
       display: block;
@@ -460,5 +465,3 @@ nav ul li a:hover {
     }
 
   }
-
-
