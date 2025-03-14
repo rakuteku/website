@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/rakuteku.css">
+  <link rel="icon" type="image/png" href="/img/logoFavIcon.png">
+</head>
+<body>
+  <!--NAVBAR-->
+  <nav>
+    <div class="logo">
+      <img src="/img/logoFavIcon.png" alt="logo" />
+      <h1>RAKUTEKU</h1>
+    </div>
+    <ul>
+      <li>
+        <a href="/">ホーム</a>
+      </li>
+      <li>
+        <a href="#">会社概要</a>
+      </li>
+      <li>
+        <a href="#shouhinIchiran" onclick="event.preventDefault(); document.getElementById('shouhinIchiran').scrollIntoView({ behavior: 'smooth' });">
+          商品一覧
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="openModal(); return false;">お問い合わせ</a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </nav>
+  <div class="menubar">
+    <ul>
+      <li>
+        <a href="/">ホーム</a>
+      </li>
+      <li>
+        <a href="#">会社概要</a>
+      </li>
+      <li>
+        <a href="#shouhinIchiran" onclick="event.preventDefault(); document.getElementById('shouhinIchiran').scrollIntoView({ behavior: 'smooth' });">
+          商品一覧
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="openModal(); return false;">お問い合わせ</a>
+      </li>
+    </ul>
+  </div>
+
+  <!--HERO-->
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:2rem">RAKUTEKU</h1>
+      <p>ハイテクな商品は高いわけじゃない</p>
+      <button onclick="document.getElementById('shouhinIchiran').scrollIntoView({ behavior: 'smooth' });">商品一覧</button>
+    </div>
+  </div>
+
+  <!--CONTENT-->
+  <div class="title" id="shouhinIchiran">商品一覧</div>
+  <div class="cont">
+    <div class="item">
+      <div class="item-img"><img src="/img/cube camera 2.png"/></div>
+      <div class="item-tit">ミニ監視カメラ</div>
+      <div class="item-but">商品一覧</div>
+    </div>
+    <div class="item">
+      <div class="item-img"><img src="/img/security.png"/></div>
+      <div class="item-tit">防犯カメラ</div>
+      <div class="item-but">商品一覧</div>
+    </div>
+    <div class="item">
+      <div class="item-img"><img src="/img/trail camera.png"/></div>
+      <div class="item-tit">トレイルカメラ</div>
+      <div class="item-but">商品一覧</div>
+    </div>
+    <div class="item">
+      <div class="item-img"><img src="/img/gmblCam.png"/></div>
+      <div class="item-tit">ジンバルカメラ</div>
+      <div class="item-but">商品一覧</div>
+    </div>
+    <div class="item">
+      <div class="item-img"><img src="/img/djiNeo.png"/></div>
+      <div class="item-tit">初心者ドローン</div>
+      <div class="item-but" onclick="window.location.href = '/drones/category_drones.html';" style="cursor: pointer;">商品一覧</div>
+    </div>
+    <div class="item">
+      <div class="item-img"><img src="/img/gimbal.png"/></div>
+      <div class="item-tit">スマホジンバル</div>
+      <div class="item-but">商品一覧</div>
+    </div>
+    <div class="item">
+      <div class="item-img"><img src="/img/hochouki.png"/></div>
+      <div class="item-tit">補聴器</div>
+      <div class="item-but">商品一覧</div>
+    </div>
+    <div class="item">
+      <div class="item-img"><img src="/img/tire.png"/></div>
+      <div class="item-tit">雑多な</div>
+      <div class="item-but">商品一覧</div>
+    </div>
+  </div>
+
+  <!--CONTACT US-->
+  <div class="floating-container">
+    <button class="floating-btn" onclick="openModal()">
+        <img src="/img/iconPhone.png" alt="Custom Icon">
+        <div class="floating-text">お問い合わせ</div>
+    </button>
+  </div>
+  <div class="modal" id="modal" onclick="closeModal(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+          <span class="close-btn" onclick="closeModal(event)">X</span>
+          <h2 style="color:white">お問い合わせ</h2>
+          <div class="modal-body">
+              <div>
+                  <a href="https://line.me/ti/p/YKtb301rPt" target="_blank">
+                      <img src="/img/lineqr.jpg" alt="LINE QR Code">
+                      <p>LINE</p>
+                  </a>
+              </div>
+              <div>
+                  <a href="tel:05071088235">
+                    <img src="/img/iconPhone.png" alt="toiawaseDenwa" style="width: 42px; height:42px">
+                      <p>05071088235</p>
+                  </a>
+              </div>
+              <div>
+                  <a href="mailto:support@rakuteku.com">
+                    <img src="/img/iconEmail.png" alt="toiawaseMeru" style="width: 42px; height:42px">
+                    <p>support@rakuteku.com</p>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!--FOOTER-->
+  <footer>
+    <div class="row primary" style="max-width:1080px; margin: auto;">
+      <div class="column about">
+        <img src="/img/logoHorizontal.png" style="max-width: 210px; margin: auto;" alt="logo" />
+        <p>
+          ハイテクな商品を手頃な価格を提供します。
+          監視カメラ・ドローン・補聴器・OEM
+        </p>
+      </div>
+      <div class="column links">  
+        <h3>Quick Links</h3>
+        <ul>
+          <li>
+            <a href="#faq">ホーム</a>
+          </li>
+          <li>
+            <a href="#cookies-policy">会社概要
+            </a>
+          </li>
+          <li>
+            <a href="#terms-of-services">商品一覧</a>
+          </li>
+          <li>
+            <a href="#support">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column subscribe">
+        <h3>Buy Now</h3>
+        <div class="sns">
+          <a href="https://mercari-shops.com/shops/oqSNGMDBgWxRMsXs5gzrk3" target="_blank" style="cursor: pointer;"><img src="/img/qr-code-mercari-shops.png" style="max-width: 120px; margin: auto;" alt="logo" /></a>
+          <a href="https://auctions.yahoo.co.jp/seller/nqmya12351" target="_blank" style="cursor: pointer;"><img src="/img/qr-code-yahoo auction.png" style="max-width: 120px; margin: auto;" alt="logo" /></a>
+        </div>
+        <div class="social">
+          <i class="fa-brands fa-facebook-square"></i>
+          <i class="fa-brands fa-instagram-square"></i>
+          <i class="fa-brands fa-twitter-square"></i>
+        </div>
+      </div>
+    </div>
+    <div class="row secondary" style="max-width:1080px; margin: auto;">
+      <div class="custIconCont">
+          <i class="custIcon" style=" background-image: url('/img/iconPhone.png'); "></i>&nbsp;+81 050-7108-8235
+      </div>
+      <div class="custIconCont">
+        <i class="custIcon" style=" background-image: url('/img/iconEmail.png'); "></i>&nbsp;support@rakuteku.com
+      </div>
+      <div class="custIconCont">
+        <i class="custIcon" style=" background-image: url('/img/iconAddress.png'); "></i>&nbsp;札幌市中央区南５条西１５丁目２－３－５０３
+      </div>
+    </div>
+    <div class="row copyright">
+      <p>Copyright &copy; 2025 Rakuteku | All Rights Reserved</p>
+    </div>
+  </footer>
+  
+  <script>
+    const mobileNav = document.querySelector(".hamburger");
+    const navbar = document.querySelector(".menubar");
+    const toggleNav = () => {
+      navbar.classList.toggle("active");
+      mobileNav.classList.toggle("hamburger-active");
+    };
+    mobileNav.addEventListener("click", () => toggleNav());
+    document.addEventListener("click", (event) => {
+      const isClickInsideMenu = navbar.contains(event.target); 
+      const isClickOnHamburger = mobileNav.contains(event.target); 
+      if (navbar.classList.contains("active") && !isClickInsideMenu && !isClickOnHamburger) {
+        toggleNav(); 
+      }
+    });
+    window.addEventListener("scroll", function () {
+      const nav = document.querySelector("nav");
+      if (window.scrollY > 50) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+
+    function openModal() {
+      document.getElementById("modal").style.display = "flex";
+      toggleNav();
+    }
+    function closeModal(event) {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
