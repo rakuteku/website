@@ -289,7 +289,7 @@ nav ul li a:hover {
   width: 100%;
   text-align: center;
   position: relative;
-  z-index:2
+  z-index:10
 }
 .close-btn {
   position: absolute;
@@ -451,6 +451,7 @@ nav ul li a:hover {
     .cont .item .item-tit, .cont .item .item-but {font-size: 0.72rem}
 
     /*CONTACTUS*/
+    .floating-container {bottom: 20px;z-index:10}
     .modal-body {
       flex-direction: column;
     }
