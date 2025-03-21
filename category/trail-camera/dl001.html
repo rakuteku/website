@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/rakuteku.css">
+  <link rel="stylesheet" href="/prodDesc.css">
+  <link rel="stylesheet" href="/category.css">
   <link rel="icon" type="image/png" href="/img/logoFavIcon.png">
 </head>
 <body>
@@ -55,58 +57,125 @@
     </ul>
   </div>
 
-  <!--HERO-->
-  <div class="hero-image">
-    <div class="hero-text">
-      <h1 style="font-size:2rem">RAKUTEKU</h1>
-      <p>ハイテクな商品は高いわけじゃない</p>
-      <button onclick="document.getElementById('shouhinIchiran').scrollIntoView({ behavior: 'smooth' });">商品一覧</button>
+<!-- HERO -->
+<div class="hero-image-desc">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="/">Home</a> &gt;
+        DL001 トレイルカメラ
+    </div>
+  <img id="heroImage" src="/img/trail-camera/trailCameraCover.png" alt="Hero Image" class="hero-img">
+  <div class="hero-text-desc">
+    <h1>DL001 トレイルカメラ</h1>
+    <p>環境を自然で撮影しましょう</p>
+    <div class="descBtn">
+      <a href="https://paypayfleamarket.yahoo.co.jp/item/z377165914" target="_blank" class="button" style="background-color: #ffda47; color: black;">
+          <img src="/img/yahooLogo.png" alt="Logo 1">
+          ヤフーで購入
+      </a>
+      <a href="https://mercari-shops.com/seller/shops/oqSNGMDBgWxRMsXs5gzrk3/products/CjFME22W6LgvLUZ5kxzABa" target="_blank" class="button" style="background-color: #333; color: white;">
+          <img src="/img/mercariLogo.png" alt="Logo 2">
+          メリカリで購入
+      </a>
+    </div>
+  </div>
+  <div class="down-arrow-container">
+    <p class="down-arrow-text">詳細</p>
+    <a href="#shouhinTokucho" class="down-arrow-button">
+      <img src="/img/down.png" alt="Down Arrow">
+    </a>
+  </div>
+</div>
+
+  <!--TOKUCHO-->
+  <div class="tokuchoTitle" id="shouhinTokucho">商品特徴</div>
+  <div class="tokuchoCont" style="position: relative; margin-bottom: 7rem;">
+    <div class="tokucho">
+      <div class="tokucho-img"><img src="/img/trail-camera/trailCameraTokucho1.jpg"/></div>
+      <div class="tokucho-tit">
+        <h3>実際映像</h3>
+        <p>1080p HD</p>
+      </div>
+    </div>
+    <div class="tokucho">
+      <div class="tokucho-img"><img src="/img/trail-camera/trailCameraTokucho2.jpg"/></div>
+      <div class="tokucho-tit">
+        <h3>防水</h3>
+        <p>IP66レベル</p>
+      </div>
+    </div>
+    <div class="tokucho">
+      <div class="tokucho-img"><img src="/img/trail-camera/trailCameraTokucho3.jpg"/></div>
+      <div class="tokucho-tit">
+        <h3>画面付き</h3>
+        <p>動画・写真管理が簡単</p>
+      </div>
+    </div>
+    <div class="tokucho">
+      <div class="tokucho-img"><img src="/img/trail-camera/trailCameraTokucho4.jpg"/></div>
+      <div class="tokucho-tit">
+        <h3>長持ち</h3>
+        <p>電池で～８か月使えます</p>
+      </div>
+    </div>
+    <div class="down-arrow-container" style="bottom: -75px;">
+      <p class="down-arrow-text">購入へ</p>
+      <a href="#bundleSet" class="down-arrow-button">
+        <img src="/img/down.png" alt="Down Arrow">
+      </a>
     </div>
   </div>
 
-  <!--CONTENT-->
-  <div class="title" id="shouhinIchiran">商品一覧</div>
-  <div class="cont">
-    <div class="item">
-      <div class="item-img"><img src="/img/cube camera 2.png"/></div>
-      <div class="item-tit">ミニ監視カメラ</div>
-      <div class="item-but" onclick="window.location.href = '/category/mini-camera/category_mini_camera.html';" style="cursor: pointer;">商品一覧</div>
+  
+  <!--BUNDLE-->
+  <div class="tokuchoTitle" id="bundleSet">セット</div>
+  <div class="bundleCont" style="position: relative;">
+    <div class="bundleImg">
+      <img src="/img/trail-camera/trailCameraBundle.jpg" alt="Logo 1">
     </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/security.png"/></div>
-      <div class="item-tit">防犯カメラ</div>
-      <div class="item-but" onclick="window.location.href = '/category/bouhan-kamera/okam.html';" style="cursor: pointer;">商品一覧</div>
+    <div class="bundleDesc">
+      <div class="bundleTit">DL001 トレイルカメラ</div>
+      <div class="bundlePrice">3980円</div>
+      <div class="bundleList">本体 x1  ; ストラップ x1; ; 日本語説明書 x1</div>
+      <div class="descBtn">
+          <a href="https://paypayfleamarket.yahoo.co.jp/item/z377165914" target="_blank" class="button" style="background-color: #ffda47; color: black;">
+              <img src="/img/yahooLogo.png" alt="Logo 1">
+              ヤフーで購入
+          </a>
+          <a href="https://mercari-shops.com/seller/shops/oqSNGMDBgWxRMsXs5gzrk3/products/CjFME22W6LgvLUZ5kxzABa" target="_blank" class="button" style="background-color: #333; color: white;">
+              <img src="/img/mercariLogo.png" alt="Logo 2">
+              メリカリで購入
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/trail camera.png"/></div>
-      <div class="item-tit">トレイルカメラ</div>
-      <div class="item-but" onclick="window.location.href = '/category/trail-camera/dl001.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/gmblCam.png"/></div>
-      <div class="item-tit">ジンバルカメラ</div>
-      <div class="item-but" onclick="window.location.href = '/category/gimbal-camera/feiyuTechPocket2.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/djiNeo.png"/></div>
-      <div class="item-tit">初心者ドローン</div>
-      <div class="item-but" onclick="window.location.href = '/category/drones/category_drones.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/gimbal.png"/></div>
-      <div class="item-tit">スマホジンバル</div>
-      <div class="item-but" onclick="window.location.href = '/category/sumaho-jinbaru/aochuan-smart-xe.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/hochouki.png"/></div>
-      <div class="item-tit">補聴器</div>
-      <div class="item-but" onclick="window.location.href = '/category/hochouki/category_hochouki.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/tire.png"/></div>
-      <div class="item-tit">電動ポンプ</div>
-      <div class="item-but" onclick="window.location.href = '/category/dendou-ponpu/216.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
+  </div>
+
+  <!--SPEC-->
+  <div class="tokuchoTitle" id="shouhinSupekku">商品スペック</div>
+  <div class="table-container">
+    <img src="/img/bouhan-kamera/bouhanKameraTrp.png" alt="Table Image" class="table-image" style="max-width:120px">
+    <table>
+      <caption>DL001 トレイルカメラ</caption>
+      <tbody>
+        <tr><td>サイズ ：</td><td><p>145 * 82 * 60mm</p></td></tr>
+        <tr><td>重さ：</td><td>220g (電池なし)</td></tr>
+        <tr><td>材質: </td><td>プラスチックハウジング</td></tr>
+        <tr><td>レンズ径: </td><td>17 mm</td></tr>
+        <tr><td>最適焦点距離: </td><td>2.2 m</td></tr>
+        <tr><td>W視野角:</td><td> 120°</td></tr>
+        <tr><td>ディスプレイ画面：</td><td>2.0インチ</td></tr>
+        <tr><td>赤外線:  </td><td>38 940 赤外線LED</td></tr>
+        <tr><td>夜間視認距離: </td><td>6～8 m</td></tr>
+        <tr><td>PIRトリガー開始時間: </td><td> 0.8秒</td></tr>
+        <tr><td>PIRトリガー距離: </td><td>  6〜8m</td></tr>
+        <tr><td>イメージセンサー： </td><td> COMS+</td></tr>
+        <tr><td>動画:  </td><td> 1920 * 1080P、1280*720P、848 * 480P</td></tr>
+        <tr><td>写真:  </td><td> 5MP、8MP、12MP、16MP</td></tr>
+        <tr><td>防水：</td><td> IP66（強風による粉塵が内部に入らず、豪雨でも浸水の恐れがない防塵防水）</td></tr>
+        <tr><td>SDカード </td><td> 最大32GB</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <!--CONTACT US-->
@@ -224,6 +293,17 @@
       }
     });
 
+    function updateHeroImage() {
+      const heroImage = document.getElementById('heroImage');
+      if (window.innerWidth <= 768) {
+          heroImage.src = "/img/trail-camera/trailCameraCoverSumaho.png"; // Mobile image
+      } else {
+          heroImage.src = "/img/trail-camera/trailCameraCover.png"; // PC image
+      }
+    }
+    window.addEventListener('load', updateHeroImage);
+    window.addEventListener('resize', updateHeroImage);
+
     function openModal() {
       document.getElementById("modal").style.display = "flex";
       toggleNav();
@@ -231,6 +311,13 @@
     function closeModal(event) {
       document.getElementById("modal").style.display = "none";
     }
+
+    // Smooth scroll to the target section
+    document.querySelector('.down-arrow-button').addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent default anchor behavior
+      const target = document.querySelector(this.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
   </script>
 </body>
 </html>

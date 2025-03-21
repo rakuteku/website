@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/rakuteku.css">
+  <link rel="stylesheet" href="/prodDesc.css">
+  <link rel="stylesheet" href="/category.css">
   <link rel="icon" type="image/png" href="/img/logoFavIcon.png">
 </head>
 <body>
@@ -55,58 +57,119 @@
     </ul>
   </div>
 
-  <!--HERO-->
-  <div class="hero-image">
-    <div class="hero-text">
-      <h1 style="font-size:2rem">RAKUTEKU</h1>
-      <p>ハイテクな商品は高いわけじゃない</p>
-      <button onclick="document.getElementById('shouhinIchiran').scrollIntoView({ behavior: 'smooth' });">商品一覧</button>
+<!-- HERO -->
+<div class="hero-image-desc">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="/">Home</a> &gt;
+        <a href="/category/hochouki/category_hochouki.html">補聴器</a> &gt; &gt;
+        電池式補聴器
+    </div>
+  <img id="heroImage" src="/img/hochouki/denchi/hochoukiDenchiCover.png" alt="Hero Image" class="hero-img">
+  <div class="hero-text-desc">
+    <h1>電池式補聴器</h1>
+    <p>愛している皆さんがよく聞こえるように</p>
+    <div class="descBtn">
+      <a href="https://paypayfleamarket.yahoo.co.jp/item/z403367404" target="_blank" class="button" style="background-color: #ffda47; color: black;">
+          <img src="/img/yahooLogo.png" alt="Logo 1">
+          ヤフーで購入
+      </a>
+      <a href="https://mercari-shops.com/seller/shops/oqSNGMDBgWxRMsXs5gzrk3/products/pCWiHqqiJz6vGYMUS8sVZf" target="_blank" class="button" style="background-color: #333; color: white;">
+          <img src="/img/mercariLogo.png" alt="Logo 2">
+          メリカリで購入
+      </a>
+    </div>
+  </div>
+  <div class="down-arrow-container">
+    <p class="down-arrow-text">詳細</p>
+    <a href="#shouhinTokucho" class="down-arrow-button">
+      <img src="/img/down.png" alt="Down Arrow">
+    </a>
+  </div>
+</div>
+
+  <!--TOKUCHO-->
+  <div class="tokuchoTitle" id="shouhinTokucho">商品特徴</div>
+  <div class="tokuchoCont" style="position: relative; margin-bottom: 7rem;">
+    <div class="tokucho">
+      <div class="tokucho-img"><img src="/img/hochouki/denchi/hochoukiDenchiTokucho1.jpg"/></div>
+      <div class="tokucho-tit">
+        <h3>調整可能</h3>
+        <p>30倍まで調整できます</p>
+      </div>
+    </div>
+    <div class="tokucho">
+      <div class="tokucho-img"><img src="/img/hochouki/denchi/hochoukiDenchiTokucho2.jpg"/></div>
+      <div class="tokucho-tit">
+        <h3>目立たない</h3>
+        <p>肌色で綺麗に見える。</p>
+      </div>
+    </div>
+    <div class="tokucho">
+      <div class="tokucho-img"><img src="/img/hochouki/denchi/hochoukiDenchiTokucho3.jpg"/></div>
+      <div class="tokucho-tit">
+        <h3>電池式</h3>
+        <p>３～５日間使えます</p>
+      </div>
+    </div>
+    <div class="tokucho">
+      <div class="tokucho-img"><img src="/img/hochouki/denchi/hochoukiDenchiTokucho4.jpg"/></div>
+      <div class="tokucho-tit">
+        <h3>超小型</h3>
+        <p>持ち運びやすい</p>
+      </div>
+    </div>
+    <div class="down-arrow-container" style="bottom: -75px;">
+      <p class="down-arrow-text">購入へ</p>
+      <a href="#bundleSet" class="down-arrow-button">
+        <img src="/img/down.png" alt="Down Arrow">
+      </a>
     </div>
   </div>
 
-  <!--CONTENT-->
-  <div class="title" id="shouhinIchiran">商品一覧</div>
-  <div class="cont">
-    <div class="item">
-      <div class="item-img"><img src="/img/cube camera 2.png"/></div>
-      <div class="item-tit">ミニ監視カメラ</div>
-      <div class="item-but" onclick="window.location.href = '/category/mini-camera/category_mini_camera.html';" style="cursor: pointer;">商品一覧</div>
+  
+  <!--BUNDLE-->
+  <div class="tokuchoTitle" id="bundleSet">セット</div>
+  <div class="bundleCont" style="position: relative;">
+    <div class="bundleImg">
+      <img src="/img/hochouki/denchi/hochoukiDenchiBundle.jpg" alt="Logo 1">
     </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/security.png"/></div>
-      <div class="item-tit">防犯カメラ</div>
-      <div class="item-but" onclick="window.location.href = '/category/bouhan-kamera/okam.html';" style="cursor: pointer;">商品一覧</div>
+    <div class="bundleDesc">
+      <div class="bundleTit">電池式補聴器</div>
+      <div class="bundlePrice">1480円</div>
+      <div class="bundleList">本体 x1 ; 交換シリコンプラグｘ3; ; LR41電池 x2 ; ブラシｘ１;　ボックス x1 ; 日本語説明書 x1</div>
+      <div class="descBtn">
+          <a href="https://paypayfleamarket.yahoo.co.jp/item/z403367404" target="_blank" class="button" style="background-color: #ffda47; color: black;">
+              <img src="/img/yahooLogo.png" alt="Logo 1">
+              ヤフーで購入
+          </a>
+          <a href="https://mercari-shops.com/seller/shops/oqSNGMDBgWxRMsXs5gzrk3/products/pCWiHqqiJz6vGYMUS8sVZf" target="_blank" class="button" style="background-color: #333; color: white;">
+              <img src="/img/mercariLogo.png" alt="Logo 2">
+              メリカリで購入
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/trail camera.png"/></div>
-      <div class="item-tit">トレイルカメラ</div>
-      <div class="item-but" onclick="window.location.href = '/category/trail-camera/dl001.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/gmblCam.png"/></div>
-      <div class="item-tit">ジンバルカメラ</div>
-      <div class="item-but" onclick="window.location.href = '/category/gimbal-camera/feiyuTechPocket2.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/djiNeo.png"/></div>
-      <div class="item-tit">初心者ドローン</div>
-      <div class="item-but" onclick="window.location.href = '/category/drones/category_drones.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/gimbal.png"/></div>
-      <div class="item-tit">スマホジンバル</div>
-      <div class="item-but" onclick="window.location.href = '/category/sumaho-jinbaru/aochuan-smart-xe.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/hochouki.png"/></div>
-      <div class="item-tit">補聴器</div>
-      <div class="item-but" onclick="window.location.href = '/category/hochouki/category_hochouki.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/tire.png"/></div>
-      <div class="item-tit">電動ポンプ</div>
-      <div class="item-but" onclick="window.location.href = '/category/dendou-ponpu/216.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
+  </div>
+
+  <!--SPEC-->
+  <div class="tokuchoTitle" id="shouhinSupekku">商品スペック</div>
+  <div class="table-container">
+    <img src="/img/hochouki/denchi/hochoukiDenchiTrp.png" alt="Table Image" class="table-image" style="max-width:120px">
+    <table>
+      <caption>電池式補聴器</caption>
+      <tbody>
+        <tr><td>サイズ：</td><td><p>1.9*1.4*1.6cm</p></td></tr>
+        <tr><td>重さ：</td><td><p>～３ｇ</p></td></tr>
+        <tr><td>音の増幅 ：</td><td><p>３０dB</p></td></tr>
+        <tr><td>周波数：</td><td>３００～４０００Hz</td></tr>
+        <tr><td>音の歪み：</td><td>＜１０％</td></tr>
+        <tr><td>電池タイプ：</td><td>LR41ｘ１</td></tr>
+        <tr><td>使用時間：</td><td>～5日間</td></tr>
+        <tr><td>電圧：</td><td>1.5V</td></tr>
+        <tr><td>電流：</td><td>4mA</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <!--CONTACT US-->
@@ -224,6 +287,17 @@
       }
     });
 
+    function updateHeroImage() {
+      const heroImage = document.getElementById('heroImage');
+      if (window.innerWidth <= 768) {
+          heroImage.src = "/img/hochouki/denchi/hochoukiDenchiCoverSumaho.png"; // Mobile image
+      } else {
+          heroImage.src = "/img/hochouki/denchi/hochoukiDenchiCover.png"; // PC image
+      }
+    }
+    window.addEventListener('load', updateHeroImage);
+    window.addEventListener('resize', updateHeroImage);
+
     function openModal() {
       document.getElementById("modal").style.display = "flex";
       toggleNav();
@@ -231,6 +305,13 @@
     function closeModal(event) {
       document.getElementById("modal").style.display = "none";
     }
+
+    // Smooth scroll to the target section
+    document.querySelector('.down-arrow-button').addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent default anchor behavior
+      const target = document.querySelector(this.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
   </script>
 </body>
 </html>
