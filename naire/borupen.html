@@ -7,35 +7,37 @@
   <title>RAKUTEKU｜最安値名入れボールペン簡単注文</title>
   <meta name="description" content="名入れボールペンの注文を承り中です。">
   <link rel="stylesheet" href="/rakuteku.css">
+  <link rel="stylesheet" href="/prodDesc.css">
+  <link rel="stylesheet" href="/naire.css">
   <link rel="icon" type="image/png" href="/img/logoFavIcon.png">
 </head>
 <body>
   <!--NAVBAR-->
-  <nav>
+  <nav style="box-shadow:none">
     <div class="logo">
       <img src="/img/logoFavIcon.png" alt="logo" />
       <h1>RAKUTEKU</h1>
     </div>
     <ul>
       <li>
-        <a href="/">ホーム</a>
+        <a href="/" style="color:black">ホーム</a>
       </li>
       <li>
-        <a href="#">会社概要</a>
+        <a href="#" style="color:black">会社概要</a>
       </li>
       <li>
-        <a href="#shouhinIchiran" onclick="event.preventDefault(); document.getElementById('shouhinIchiran').scrollIntoView({ behavior: 'smooth' });">
+        <a href="#shouhinIchiran" onclick="event.preventDefault(); document.getElementById('shouhinIchiran').scrollIntoView({ behavior: 'smooth' });" style="color:black">
           商品一覧
         </a>
       </li>
       <li>
-        <a href="#" onclick="openModal(); return false;">お問い合わせ</a>
+        <a href="#" onclick="openModal(); return false;" style="color:black">お問い合わせ</a>
       </li>
     </ul>
     <div class="hamburger">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
+      <span class="line" style="background-color: black;"></span>
+      <span class="line" style="background-color: black;"></span>
+      <span class="line" style="background-color: black;"></span>
     </div>
   </nav>
   <div class="menubar">
@@ -57,57 +59,65 @@
     </ul>
   </div>
 
-  <!--HERO-->
-  <div class="hero-image">
+<!-- HERO -->
+<div class="hero-container">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="/">Home</a> &gt;
+        <a href="/category/mini-camera/category_mini_camera.html">ミニカメラ</a> &gt;
+    </div>
+    <img id="heroImage" src="/img/naire/hero-pc-mech.jpg" alt="Hero Image" class="hero-image">
     <div class="hero-text">
-      <h1 style="font-size:2rem">RAKUTEKU</h1>
-      <p>ハイテクな商品は高いわけじゃない</p>
-      <button onclick="document.getElementById('shouhinIchiran').scrollIntoView({ behavior: 'smooth' });">商品一覧</button>
+      <h1 id="heroTitle">お手頃な名入れサービス</h1>
+      <p id="heroDesc">記念品やノベルティに名入れ製品を作りませんか？</p>
+      <div class="hero-buttons">
+        <a id="heroButton" href="#" class="button" style="background-color:#4daf51; color: white;">
+            詳細
+        </a>
+      </div>
     </div>
-  </div>
+    <div class="down-arrow-container">
+      <p class="down-arrow-text">商品一覧</p>
+      <a href="#shouhinTokucho" class="down-arrow-button" style="box-shadow: none;">
+        <img src="/img/down.png" alt="Down Arrow">
+      </a>
+    </div>
+    <!-- Navigation Arrows -->
+    <button class="nav-btn left-btn" onclick="prevSlide()">&#10094;</button>
+    <button class="nav-btn right-btn" onclick="nextSlide()">&#10095;</button>
+</div>
 
-  <!--CONTENT-->
-  <div class="title" id="shouhinIchiran">商品一覧</div>
-  <div class="cont">
-    <div class="item">
-      <div class="item-img"><img src="/img/cube camera 2.png"/></div>
-      <div class="item-tit">ミニ監視カメラ</div>
-      <div class="item-but" onclick="window.location.href = '/category/mini-camera/category_mini_camera.html';" style="cursor: pointer;">商品一覧</div>
+
+  <!--TOKUCHO-->
+<div class="tokuchoTitle" id="shouhinTokucho">商品一覧</div>
+  <div class="tokuchoCont" style=" margin-bottom: 7rem;">
+    <div class="tokucho" onclick="window.location.href = '';" style="cursor: pointer;">
+      <div class="tokucho-img"><img src="/img/naire/oem-logo-mech-desc-a.png"/></div>
+      <div class="tokucho-tit">
+        <h3>メカニカル</h3>
+        <p>50本7500円 &nbsp; 100本8500円</p>
+      </div>
     </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/security.png"/></div>
-      <div class="item-tit">防犯カメラ</div>
-      <div class="item-but" onclick="window.location.href = '/category/bouhan-kamera/okam.html';" style="cursor: pointer;">商品一覧</div>
+    <div class="tokucho" onclick="window.location.href = '';" style="cursor: pointer;">
+      <div class="tokucho-img"><img src="/img/naire/oem-logo-gel-desc-a.jpg"/></div>
+      <div class="tokucho-tit">
+        <h3>ジェル</h3>
+        <p>50本7500円 &nbsp; 100本8500円</p>
+      </div>
     </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/trail camera.png"/></div>
-      <div class="item-tit">トレイルカメラ</div>
-      <div class="item-but" onclick="window.location.href = '/category/trail-camera/dl001.html';" style="cursor: pointer;">商品一覧</div>
+    <div class="tokucho" onclick="window.location.href = '';" style="cursor: pointer;">
+        <div class="tokucho-img"><img src="/img/naire/oem-logo-qr-desc-a.jpg"/></div>
+        <div class="tokucho-tit">
+          <h3>QRコード付き</h3>
+          <p>50本9000円 &nbsp; 100本10000円</p>
+        </div>
     </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/gmblCam.png"/></div>
-      <div class="item-tit">ジンバルカメラ</div>
-      <div class="item-but" onclick="window.location.href = '/category/gimbal-camera/feiyuTechPocket2.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/djiNeo.png"/></div>
-      <div class="item-tit">初心者ドローン</div>
-      <div class="item-but" onclick="window.location.href = '/category/drones/category_drones.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/gimbal.png"/></div>
-      <div class="item-tit">スマホジンバル</div>
-      <div class="item-but" onclick="window.location.href = '/category/sumaho-jinbaru/aochuan-smart-xe.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/hochouki.png"/></div>
-      <div class="item-tit">補聴器</div>
-      <div class="item-but" onclick="window.location.href = '/category/hochouki/category_hochouki.html';" style="cursor: pointer;">商品一覧</div>
-    </div>
-    <div class="item">
-      <div class="item-img"><img src="/img/tire.png"/></div>
-      <div class="item-tit">電動ポンプ</div>
-      <div class="item-but" onclick="window.location.href = '/category/dendou-ponpu/216.html';" style="cursor: pointer;">商品一覧</div>
+    <div class="tokucho" onclick="window.location.href = '';" style="cursor: pointer;">
+      <div class="tokucho-img"><img src="/img/naire/oem-logo-3-desc-a.jpg"/></div>
+      <div class="tokucho-tit">
+        <h3>３色ペン</h3>
+        <p>50本9900円 &nbsp; 100本10800円</p>
+      </div>
     </div>
   </div>
 
@@ -224,6 +234,62 @@
       } else {
         nav.classList.remove("scrolled");
       }
+    });
+
+// Array of slides, each containing the image, title, description, and button text
+const slides = [
+  {
+    pcImage: "/img/naire/hero-pc-mech.jpg",
+    mobileImage: "/img/naire/hero-sumaho-mech.jpg",
+    title: "お手頃な名入れサービス",
+    desc: "記念品やノベルティに名入れ製品を作りませんか？",
+    buttonLink: "",
+  },
+  {
+    pcImage: "/img/naire/hero-pc-qua.jpg",
+    mobileImage: "/img/naire/hero-sumaho-qua.jpg",
+    title: "修正可能",
+    desc: "制作前にデザインの確認が出来るので安心です",
+    buttonLink: "",
+  },
+  {
+    pcImage: "/img/naire/hero-pc-var.jpg",
+    mobileImage: "/img/naire/hero-sumaho-var.jpg",
+    title: "CREATIVE",
+    desc: "イラストやロゴマークの印刷も可能",
+    buttonLink: "",
+  }
+];
+let currentIndex = 0;
+function updateHeroContent() {
+  const heroImage = document.getElementById('heroImage');
+  const heroTitle = document.getElementById('heroTitle');
+  const heroDesc = document.getElementById('heroDesc');
+  const button1 = document.querySelector('.hero-buttons .button:nth-child(1)');
+  const button2 = document.querySelector('.hero-buttons .button:nth-child(2)');
+  const slide = slides[currentIndex];
+  const screenWidth = window.innerWidth;
+  heroImage.src = screenWidth <= 768 ? slide.mobileImage : slide.pcImage;
+  heroTitle.textContent = slide.title;
+  heroDesc.textContent = slide.desc;
+  heroButton.href = slide.buttonLink;
+}
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateHeroContent();
+}
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateHeroContent();
+}
+window.addEventListener('load', updateHeroContent);
+window.addEventListener('resize', updateHeroContent);
+
+    // Smooth scroll to the target section
+    document.querySelector('.down-arrow-button').addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent default anchor behavior
+      const target = document.querySelector(this.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
     });
 
     function openModal() {
