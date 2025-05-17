@@ -2,6 +2,27 @@
 #heroTitle, #heroDesc {color: black}
 .line-naire {color: black;}
 .scrolled {background-color: rgba(0, 0, 0, 0.2) !important;}
+.top100Title, .top100Caption {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.top100Title {font-size:1.5rem}
+.top100Caption {font-size:0.81rem}
+.top100Cont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+    align-items: center;
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+}
+.top100 {width: 33%;padding: 0 1rem; margin-bottom: 2rem;} 
+.top100-img, .top100-img img {width:100%}
+.top100-tit {line-height: 0;}
+.top100-tit h4, .top100-tit p {font-size: 0.81rem; color: white;}
 
 .hero-container {
     height: 100vh;
