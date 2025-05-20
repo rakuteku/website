@@ -300,47 +300,43 @@
       };
       submitToGoogleSheets(formData);
     });
-    function submitToGoogleSheets(formData) {
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwf-WjTj7I6ol64V6QhKSagFm2JerV6-U5HovAxbReGIa_bFqKpguAUmJVUfsS2u_hwCw/exec';
+    async function submitToGoogleSheets(formData) {
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbypCLaXvGuS9alRsA048KOD5wgpXrQgRcaoTYb7l1-AamAQ0fIeEjTiduZOIHofYfJK0g/exec';
       const submitBtn = document.querySelector('#orderForm [type="submit"]');
-      const originalBtnText = submitBtn.textContent;
-      submitBtn.disabled = true;
-      submitBtn.textContent = "送信中...";
-      fetch(scriptURL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-      })
-      .then(response => {
-        if (!response.ok) throw new Error("Network response was not ok");
-        return response.text();
-      })
-      .then(text => {
-        let data;
-        try {
-          data = JSON.parse(text);
-        } catch {
-          throw new Error("Invalid JSON response: " + text);
+      
+      try {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "送信中...";
+        
+        const response = await fetch(scriptURL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        
+        const result = await response.json();
+        
+        if (result.status !== "success") {
+          throw new Error(result.error || "Unknown server error");
         }
-        if (data.status !== "success") {
-          throw new Error(data.error || "Unknown server error");
-        }
+
         alert('注文が送信されました！ありがとうございます。');
         orderForm.reset();
         orderFormContainer.style.display = 'none';
         orderButton.style.display = 'block';
         grecaptcha.reset();
-      })
-      .catch(error => {
+        
+      } catch (error) {
         console.error('Error:', error);
-        alert(`送信エラー: ${error.message}\n詳細はコンソールを確認してください`);
-      })
-      .finally(() => {
+        alert(`送信エラー: ${error.message}`);
+      } finally {
         submitBtn.disabled = false;
-        submitBtn.textContent = originalBtnText;
-      });
+        submitBtn.textContent = "送信";
+      }
     }
   </script>
   <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
