@@ -112,7 +112,7 @@
             <label for="phone">電話番号:</label>
             <input type="tel" id="phone" name="phone" required>
           </div>
-          <div id="html_element"></div>
+          <!--<div id="html_element"></div>-->
           <div class="form-buttons">
             <button type="button" id="resetForm">リセット</button>
             <button type="submit">送信</button>
@@ -300,44 +300,55 @@
       };
       submitToGoogleSheets(formData);
     });
+
+
     async function submitToGoogleSheets(formData) {
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbypCLaXvGuS9alRsA048KOD5wgpXrQgRcaoTYb7l1-AamAQ0fIeEjTiduZOIHofYfJK0g/exec';
-      const submitBtn = document.querySelector('#orderForm [type="submit"]');
-      
-      try {
-        submitBtn.disabled = true;
-        submitBtn.textContent = "送信中...";
-        
-        const response = await fetch(scriptURL, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData)
-        });
-
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        
-        const result = await response.json();
-        
-        if (result.status !== "success") {
-          throw new Error(result.error || "Unknown server error");
-        }
-
-        alert('注文が送信されました！ありがとうございます。');
-        orderForm.reset();
-        orderFormContainer.style.display = 'none';
-        orderButton.style.display = 'block';
-        grecaptcha.reset();
-        
-      } catch (error) {
-        console.error('Error:', error);
-        alert(`送信エラー: ${error.message}`);
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = "送信";
-      }
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzPvZ_-YUvaA8Fx43IEJ38jHjBBHWIcr3Sv-axPGwERT38XW19R1Imk08RTo-mH2gG1Ng/exec';
+  const submitBtn = document.querySelector('#orderForm [type="submit"]');
+  
+  try {
+    // 1. Show loading state
+    submitBtn.disabled = true;
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = "送信中...";
+    
+    // 2. Make the request
+    const response = await fetch(scriptURL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+    
+    // 3. Handle response
+    const text = await response.text();
+    let data;
+    
+    try {
+      data = JSON.parse(text);
+    } catch {
+      throw new Error(`Invalid response: ${text.slice(0, 100)}...`);
     }
+    
+    if (!response.ok || data.status !== "success") {
+      throw new Error(data.message || "Server error");
+    }
+    
+    // 4. Success actions
+    alert('注文が送信されました！');
+    orderForm.reset();
+    orderFormContainer.style.display = 'none';
+    orderButton.style.display = 'block';
+    grecaptcha.reset();
+    
+  } catch (error) {
+    console.error('Submission error:', error);
+    alert(`送信に失敗しました: ${error.message}`);
+    
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
+}
   </script>
   <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
       async defer>
