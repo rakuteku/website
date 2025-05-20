@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAKUTEKU｜最安値名入れボールペン簡単注文</title>
+  <meta name="description" content="名入れボールペンの注文を承り中です。">
+  <link rel="stylesheet" href="/rakuteku.css">
+  <link rel="stylesheet" href="/prodDesc.css">
+  <link rel="stylesheet" href="/naire.css">
+  <link rel="icon" type="image/png" href="/img/logoFavIcon.png">
+  <script type="text/javascript">
+    var onloadCallback = function() {
+      grecaptcha.render('html_element', {
+        'sitekey' : '6Lfw4kArAAAAAMNcWWBg1U5F7HhE8Thq2Z7sCKUz'
+      });
+    };
+  </script>
+</head>
+<body>
+  <!--NAVBAR-->
+  <nav style="box-shadow:none; background-color: black;">
+    <div class="logo">
+      <img src="/img/logoFavIcon.png" alt="logo" />
+      <h1>RAKUTEKU</h1>
+    </div>
+    <ul>
+      <li>
+        <a href="/" style="color:white">ホーム</a>
+      </li>
+      <li>
+        <a href="#" style="color:white">会社概要</a>
+      </li>
+      <li>
+        <a href="#shouhinIchiran" onclick="event.preventDefault(); document.getElementById('shouhinIchiran').scrollIntoView({ behavior: 'smooth' });" style="color:white">
+          商品一覧
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="openModal(); return false;" style="color:white">お問い合わせ</a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="line" style="background-color: white;"></span>
+      <span class="line" style="background-color: white;"></span>
+      <span class="line" style="background-color: white;"></span>
+    </div>
+  </nav>
+  <div class="menubar">
+    <ul>
+      <li>
+        <a href="/">ホーム</a>
+      </li>
+      <li>
+        <a href="#">会社概要</a>
+      </li>
+      <li>
+        <a href="#shouhinIchiran" onclick="event.preventDefault(); document.getElementById('shouhinIchiran').scrollIntoView({ behavior: 'smooth' });">
+          商品一覧
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="openModal(); return false;">お問い合わせ</a>
+      </li>
+    </ul>
+  </div>
+
+<!-- DETAIL -->
+<div class="naire-detail-container">
+    <div class="gallery">
+        <div class="thumbnails">
+          <img src="/img/naire/oem-logo-mech-desc-a.png" data-full="/img/naire/oem-logo-mech-desc-a.png" class="active" />
+          <img src="/img/naire/oem-logo-mech-desc-b.jpg" data-full="/img/naire/oem-logo-mech-desc-b.jpg" />
+          <img src="/img/naire/oem-logo-mech-desc-c.jpg" data-full="/img/naire/oem-logo-mech-desc-c.jpg" />
+          <img src="/img/naire/oem-logo-mech-desc-d.jpg" data-full="/img/naire/oem-logo-mech-desc-d.jpg" />
+          <img src="/img/naire/oem-logo-mech-desc-e.jpg" data-full="/img/naire/oem-logo-mech-desc-e.jpg" />
+        </div>
+        <img id="mainImg" class="gallery-main" src="/img/naire/oem-logo-mech-desc-a.png" alt="商品画像" />
+    </div>
+    <div class="order-form">
+      <h2>簡単料金シミュレーション </h2>
+      <label for="lot">ロット数</label>
+      <select id="lot">
+        <option value="50">50本</option>
+        <option value="100">100本</option>
+      </select>
+      <p class="notice">印刷は１色です、表示される値段は送料込みです</p>
+      <p class="notice">日本全国約２～３週間でお届けします。</p>
+      <div class="totals">
+        <div><span>1本あたり(税込)</span><span id="unitPrice" class="amount">¥0</span></div>
+        <div><span>合計金額(税込)</span><span id="totalPrice" class="amount">¥0</span></div>
+        <button id="orderButton" class="order-button">注文する</button>
+      </div>
+      <!-- Order Form (hidden by default) -->
+      <div id="orderFormContainer" class="order-form-container" style="display: none;">
+        <h3>注文情報</h3>
+        <form id="orderForm" action="?" method="POST">
+          <div class="form-group" >
+            <label for="name">お名前:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="emailConfirm">メールアドレス(確認):</label>
+            <input type="email" id="emailConfirm" name="emailConfirm" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">電話番号:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div id="html_element"></div>
+          <div class="form-buttons">
+            <button type="button" id="resetForm">リセット</button>
+            <button type="submit">送信</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--CONTACT US-->
+  <div class="floating-container">
+    <button class="floating-btn" onclick="openModal()">
+        <img src="/img/iconPhone.png" alt="Custom Icon">
+        <div class="floating-text">お問い合わせ</div>
+    </button>
+  </div>
+  <div class="modal" id="modal" onclick="closeModal(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+          <span class="close-btn" onclick="closeModal(event)">X</span>
+          <h2 style="color:white">お問い合わせ</h2>
+          <div class="modal-body">
+              <div>
+                  <a href="https://line.me/ti/p/YKtb301rPt" target="_blank">
+                      <img src="/img/lineqr.jpg" alt="LINE QR Code">
+                      <p>LINE</p>
+                  </a>
+              </div>
+              <div>
+                  <a href="tel:05071088235">
+                    <img src="/img/iconPhone.png" alt="toiawaseDenwa" style="width: 42px; height:42px">
+                      <p>05071088235</p>
+                  </a>
+              </div>
+              <div>
+                  <a href="mailto:support@rakuteku.com">
+                    <img src="/img/iconEmail.png" alt="toiawaseMeru" style="width: 42px; height:42px">
+                    <p>support@rakuteku.com</p>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!--FOOTER-->
+  <footer>
+    <div class="row primary" style="max-width:1080px; margin: auto;">
+      <div class="column about">
+        <img src="/img/logoHorizontal.png" style="max-width: 210px; margin: auto;" alt="logo" />
+        <p>
+          ハイテクな商品を手頃な価格を提供します。
+          監視カメラ・ドローン・補聴器・OEM
+        </p>
+      </div>
+      <div class="column links">  
+        <h3>Quick Links</h3>
+        <ul>
+          <li>
+            <a href="#faq">ホーム</a>
+          </li>
+          <li>
+            <a href="#cookies-policy">会社概要
+            </a>
+          </li>
+          <li>
+            <a href="#terms-of-services">商品一覧</a>
+          </li>
+          <li>
+            <a href="#support">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column subscribe">
+        <h3>Buy Now</h3>
+        <div class="sns">
+          <a href="https://mercari-shops.com/shops/oqSNGMDBgWxRMsXs5gzrk3" target="_blank" style="cursor: pointer;"><img src="/img/qr-code-mercari-shops.png" style="max-width: 120px; margin: auto;" alt="logo" /></a>
+          <a href="https://auctions.yahoo.co.jp/seller/nqmya12351" target="_blank" style="cursor: pointer;"><img src="/img/qr-code-yahoo auction.png" style="max-width: 120px; margin: auto;" alt="logo" /></a>
+        </div>
+        <div class="social">
+          <i class="fa-brands fa-facebook-square"></i>
+          <i class="fa-brands fa-instagram-square"></i>
+          <i class="fa-brands fa-twitter-square"></i>
+        </div>
+      </div>
+    </div>
+    <div class="row secondary" style="max-width:1080px; margin: auto;">
+      <div class="custIconCont">
+          <i class="custIcon" style=" background-image: url('/img/iconPhone.png'); "></i>&nbsp;+81 050-7108-8235
+      </div>
+      <div class="custIconCont">
+        <i class="custIcon" style=" background-image: url('/img/iconEmail.png'); "></i>&nbsp;support@rakuteku.com
+      </div>
+      <div class="custIconCont">
+        <i class="custIcon" style=" background-image: url('/img/iconAddress.png'); "></i>&nbsp;札幌市中央区南５条西１５丁目２－３－５０３
+      </div>
+    </div>
+    <div class="row copyright">
+      <p>Copyright &copy; 2025 Rakuteku | All Rights Reserved</p>
+    </div>
+  </footer>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    const mobileNav = document.querySelector(".hamburger");
+    const navbar = document.querySelector(".menubar");
+    const toggleNav = () => {
+      navbar.classList.toggle("active");
+      mobileNav.classList.toggle("hamburger-active");
+    };
+    mobileNav.addEventListener("click", () => toggleNav());
+    document.addEventListener("click", (event) => {
+      const isClickInsideMenu = navbar.contains(event.target); 
+      const isClickOnHamburger = mobileNav.contains(event.target); 
+      if (navbar.classList.contains("active") && !isClickInsideMenu && !isClickOnHamburger) {
+        toggleNav(); 
+      }
+    });
+    window.addEventListener("scroll", function () {
+      const nav = document.querySelector("nav");
+      if (window.scrollY > 50) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+        document.querySelectorAll('.thumbnails img').forEach(img => {
+      img.addEventListener('click', () => {
+        document.querySelector('.thumbnails img.active').classList.remove('active');
+        img.classList.add('active');
+        document.getElementById('mainImg').src = img.dataset.full;
+      });
+    });
+    const lotEl   = document.getElementById('lot');
+    const unitEl  = document.getElementById('unitPrice');
+    const totalEl = document.getElementById('totalPrice');
+    function calc() {
+        const lot = Number(lotEl.value);
+        let base;
+        if (lot >= 100) {
+          base = 85;
+        } else if (lot >= 50) {
+          base = 150;
+        } else {
+          base = 150;
+        }
+        const unitWithTax = Math.ceil(base * 1.1);
+        const totalWithTax = unitWithTax * lot;
+        unitEl.textContent  = `¥${unitWithTax.toLocaleString()}`;
+        totalEl.textContent = `¥${totalWithTax.toLocaleString()}`;
+    }
+    lotEl.addEventListener('change', calc);
+    calc();
+
+    //form
+    const orderButton = document.getElementById('orderButton');
+    const orderFormContainer = document.getElementById('orderFormContainer');
+    const orderForm = document.getElementById('orderForm');
+    const resetFormButton = document.getElementById('resetForm');
+    orderButton.addEventListener('click', function() {
+      orderFormContainer.style.display = 'block';
+      orderButton.style.display = 'none';
+    });
+    resetFormButton.addEventListener('click', function() {
+      orderForm.reset();
+    });
+    orderForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const emailConfirm = document.getElementById('emailConfirm').value;
+      if (email !== emailConfirm) {
+        alert('メールアドレスが一致しません');
+        return;
+      }
+      const recaptchaToken = grecaptcha.getResponse();
+      if (!recaptchaToken) {
+        alert('reCAPTCHAを確認してください');
+        return;
+      }
+      const formData = {
+        name: document.getElementById('name').value,
+        email: email,
+        phone: document.getElementById('phone').value,
+        lot: lotEl.value,
+        totalPrice: totalEl.textContent,
+        timestamp: new Date().toISOString(),
+        recaptchaToken: recaptchaToken
+      };
+      submitToGoogleSheets(formData);
+    });
+    function submitToGoogleSheets(formData) {
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwf-WjTj7I6ol64V6QhKSagFm2JerV6-U5HovAxbReGIa_bFqKpguAUmJVUfsS2u_hwCw/exec';
+      const submitBtn = document.querySelector('#orderForm [type="submit"]');
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "送信中...";
+      fetch(scriptURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => {
+        if (!response.ok) throw new Error("Network response was not ok");
+        return response.text();
+      })
+      .then(text => {
+        let data;
+        try {
+          data = JSON.parse(text);
+        } catch {
+          throw new Error("Invalid JSON response: " + text);
+        }
+        if (data.status !== "success") {
+          throw new Error(data.error || "Unknown server error");
+        }
+        alert('注文が送信されました！ありがとうございます。');
+        orderForm.reset();
+        orderFormContainer.style.display = 'none';
+        orderButton.style.display = 'block';
+        grecaptcha.reset();
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert(`送信エラー: ${error.message}\n詳細はコンソールを確認してください`);
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      });
+    }
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+      async defer>
+  </script>
+</body>
+</html>

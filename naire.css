@@ -24,6 +24,114 @@
 .top100-tit {line-height: 0;}
 .top100-tit h4, .top100-tit p {font-size: 0.81rem; color: white;}
 
+/*detail*/
+.naire-detail-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1080px;
+  margin: auto;
+  margin-top: 72px;
+}
+.naire-detail-container .gallery {
+  display: flex;
+  flex: 2;
+  align-items: flex-start;  
+}
+.naire-detail-container .gallery .thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 10px; 
+}
+.naire-detail-container .gallery .thumbnails img {
+  width: 80px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.naire-detail-container .gallery .thumbnails img.active {
+  border-color: #333;
+}
+.naire-detail-container .gallery .thumbnails .gallery-main {
+  flex: 1;
+  max-width: 720px;
+  border: 1px solid #ddd;
+}
+.naire-detail-container .order-form {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #4d3620;
+}
+.naire-detail-container .order-form h2 { background: #4d3620; color: #fff; margin: -20px -20px 20px; padding: 10px; font-size: 1.1rem; }
+.naire-detail-container .order-form label { display: block; margin: 10px 0 5px; }
+.naire-detail-container .order-form select, .naire-detail-container .order-form input { width: 100%; padding: 8px; box-sizing: border-box; }
+.naire-detail-container .notice { color: #c00; font-size: 0.9rem; margin-top: 5px; }
+.naire-detail-container .totals { margin-top: 20px; }
+.naire-detail-container .totals div { display: flex; justify-content: space-between; margin-bottom: 5px; }
+.naire-detail-container .totals .amount { font-size: 1.2rem; color: #c00; }
+
+/*FORM*/
+.order-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.order-button:hover {
+  background-color: #45a049;
+}
+.order-form-container {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.form-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-buttons button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+.form-buttons button[type="submit"]:hover {
+  background-color: #45a049;
+}
+.form-buttons button[type="button"] {
+  background-color: #f44336;
+  color: white;
+}
+.form-buttons button[type="button"]:hover {
+  background-color: #d32f2f;
+}
+
 .hero-container {
     height: 100vh;
     width: 100vw;
