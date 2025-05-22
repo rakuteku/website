@@ -62,6 +62,7 @@
 <!-- DETAIL -->
 <div class="naire-detail-container">
     <div class="gallery">
+        <img id="mainImg" class="gallery-main" src="/img/naire/oem-logo-mech-desc-a.png" alt="商品画像" />
         <div class="thumbnails">
           <img src="/img/naire/oem-logo-mech-desc-a.png" data-full="/img/naire/oem-logo-mech-desc-a.png" class="active" />
           <img src="/img/naire/oem-logo-mech-desc-b.jpg" data-full="/img/naire/oem-logo-mech-desc-b.jpg" />
@@ -69,7 +70,6 @@
           <img src="/img/naire/oem-logo-mech-desc-d.jpg" data-full="/img/naire/oem-logo-mech-desc-d.jpg" />
           <img src="/img/naire/oem-logo-mech-desc-e.jpg" data-full="/img/naire/oem-logo-mech-desc-e.jpg" />
         </div>
-        <img id="mainImg" class="gallery-main" src="/img/naire/oem-logo-mech-desc-a.png" alt="商品画像" />
         <div class="info-tabs">
           <div class="tab-headers">
             <button class="tab-button active" data-tab="pricing">料金表</button>
@@ -181,11 +181,14 @@
           </div>
         </div>        
     </div>
-    <div class="order-form">
+    <div class="order-form" id="order-form">
+      <button type="button" id="closeFormOrderMobile" onclick="closeModalOrderMobile()">
+        × 閉じる
+      </button>
       <h2>シムレーション・注文 </h2>
        <!-- Hidden image URL field (add your actual image URL here) -->
       <input type="hidden" id="productImage" name="productImage" value="https://rakuteku.com/img/naire/oem-logo-mech-desc-a.png">
-      <input type="hidden" id="product" name="product" value="M001">
+      <input type="hidden" id="productName" name="productName" value="M001">
       <label for="productN">商品型番</label>
       <input type="text" id="productN" name="productN" value="M001" readonly style="border:none">
       <label for="bodyColor">本体色</label>
@@ -244,9 +247,9 @@
   </div>
 
   <!--CONTACT US-->
-  <div class="floating-container">
-    <button class="floating-btn" onclick="openModal()">
-        <img src="/img/iconPhone.png" alt="Custom Icon">
+  <div class="floating-container" style="width: 90px;height: 75px;">
+    <button class="floating-btn" onclick="openModal()" >
+        <img src="/img/iconPhone.png" alt="Custom Icon" style="width: 36px; height: 36px;">
         <div class="floating-text">お問い合わせ</div>
     </button>
   </div>
@@ -276,6 +279,14 @@
           </div>
       </div>
   </div>
+
+    <!--ORDER MOBILE-->
+    <div class="floating-container-order" style="width: 90px;height: 75px;">
+      <button class="floating-btn" onclick="openModalOrder()" >
+          <img src="/img/naire/iconOrder.png" alt="Custom Icon" style="width: 36px; height: 36px;">
+          <div class="floating-text">注文</div>
+      </button>
+    </div>
 
   <!--FOOTER-->
   <footer>
@@ -412,7 +423,7 @@
         return;
       }
       const formData = {
-        product: document.getElementById('product').value,
+        product: document.getElementById('productName').value,
         bodyColor: document.getElementById('bodyColor').value,
         inkColor: document.getElementById('inkColor').value,
         lot: lotEl.value,
@@ -498,6 +509,22 @@
         document.getElementById(button.dataset.tab).classList.add('active');
       });
     });
+
+    function openModal() {
+      document.getElementById("modal").style.display = "flex";
+      toggleNav();
+    }
+    function closeModal(event) {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    function openModalOrder() {
+      document.getElementById("order-form").style.display = "block";
+      toggleNav();
+    }
+    function closeModalOrderMobile() {
+      document.getElementById("order-form").style.display = "none";
+    }
   </script>
   
 </body>

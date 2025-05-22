@@ -146,6 +146,7 @@
 .naire-detail-container .totals .amount { font-size: 1.2rem; color: #c00; }
 
 /*FORM*/
+#closeFormOrderMobile {display: none;}
 .order-button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -231,19 +232,67 @@
 
   /* Mobile Responsiveness */
   @media screen and (max-width: 768px) {
-    .hero-text {
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      width: 100%;
+    /*detail*/
+    .naire-detail-container {}
+    .naire-detail-container .gallery {}
+    .naire-detail-container .gallery .thumbnails {flex-direction: row;}
+    .naire-detail-container .gallery img {width: 100%;}
+    .naire-detail-container .gallery .thumbnails img, .naire-detail-container .gallery .thumbnails img.active {width: 18%;}
+    .naire-detail-container .gallery .thumbnails .gallery-main {}
+    /*info tabs*/
+    .naire-detail-container .gallery .info-tabs {}
+    .info-tabs {}
+    .tab-headers {}
+    .tab-button,.tab-button.active,.tab-content,.tab-content.active {font-size: 0.81rem;}
+    .tab-table {}
+    .tab-table th, .tab-table td {}
+    .tab-table th {}
+
+
+    /*order form*/
+    #closeFormOrderMobile {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: tomato; 
+      color: white; 
+      border: none; 
+      cursor: pointer; 
+      padding: 8px 12px; 
+      border-radius: 4px; 
+      font-weight: bold;
     }
-    .hero-buttons .button {
-      width: 50%;
-      margin: auto;
-      font-size: 1rem;
+    .naire-detail-container .order-form {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow: auto;
+      overflow-y: scroll;
+      z-index: 100;
+      padding-bottom: 144px;
     }
-    .hero-container h1 {
-      font-size: 1.8rem;
-    }
+    .naire-detail-container .order-form h2 { background: #4daf51; color: #fff; margin: -20px -20px 20px; padding: 10px; font-size: 1.1rem; }
+    .naire-detail-container .order-form label { display: block; margin: 10px 0 5px; }
+    .naire-detail-container .order-form select, .naire-detail-container .order-form input { width: 100%; padding: 8px; box-sizing: border-box; }
+    .naire-detail-container .notice { color: #c00; font-size: 0.9rem; margin-top: 5px; }
+    .naire-detail-container .totals { margin-top: 20px; }
+    .naire-detail-container .totals div { display: flex; justify-content: space-between; margin-bottom: 5px; }
+    .naire-detail-container .totals .amount { font-size: 1.2rem; color: #c00; }
+
+    /*FORM*/
+    .order-button {}
+    .order-button:hover {}
+    .order-form-container {}
+    .form-group {}
+    .form-group label {}
+    .form-group input {}
+    .form-buttons {}
+    .form-buttons button {}
+    .form-buttons button[type="submit"] {}
+    .form-buttons button[type="submit"]:hover {}
+    .form-buttons button[type="button"] {}
+    .form-buttons button[type="button"]:hover {}
   }
   
