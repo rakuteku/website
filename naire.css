@@ -35,13 +35,20 @@
 .naire-detail-container .gallery {
   display: flex;
   flex: 2;
-  align-items: flex-start;  
+  align-items: flex-start;
+  flex-wrap: wrap;  
 }
 .naire-detail-container .gallery .thumbnails {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-right: 10px; 
+}
+.naire-detail-container .gallery img {
+  max-width: 540px;
+  margin: auto;
+  margin-top: 0;
+  border-radius: 4px;
 }
 .naire-detail-container .gallery .thumbnails img {
   width: 80px;
@@ -56,13 +63,81 @@
   max-width: 720px;
   border: 1px solid #ddd;
 }
+/*info tabs*/
+.naire-detail-container .gallery .info-tabs {
+  width: 100%;
+}
+.info-tabs {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-top: 20px;
+  margin-block: 20px  ;
+}
+.tab-headers {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.tab-button {
+  flex: 1;
+  background: #4daf51;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+.tab-button.active {
+  background: #90ee90;
+  border-bottom: 3px solid #fff;
+  color: black;
+}
+.tab-content {
+  display: none;
+  padding: 15px;
+  background: #ddd;
+  border-top: none;
+}
+.tab-content.active {
+  display: block;
+}
+.tab-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  color: black;
+}
+.tab-table th,
+.tab-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+.tab-table th {
+  width: 30%;
+  background-color: #ddd;
+  color: black;
+  text-align: left;
+  font-weight: bold;
+}
+
+
+/*order form*/
 .naire-detail-container .order-form {
   flex: 1;
   background: #fff;
   padding: 20px;
-  border: 1px solid #4d3620;
+  height: 100%;
+  font-size: 0.81rem;
+  position: sticky;
+  top: 72px;
+  right: 0;
+  border-radius: 0.5rem;
+  box-sizing: 2px 2px 6px black;;
 }
-.naire-detail-container .order-form h2 { background: #4d3620; color: #fff; margin: -20px -20px 20px; padding: 10px; font-size: 1.1rem; }
+.naire-detail-container .order-form h2 { background: #4daf51; color: #fff; margin: -20px -20px 20px; padding: 10px; font-size: 1.1rem; }
 .naire-detail-container .order-form label { display: block; margin: 10px 0 5px; }
 .naire-detail-container .order-form select, .naire-detail-container .order-form input { width: 100%; padding: 8px; box-sizing: border-box; }
 .naire-detail-container .notice { color: #c00; font-size: 0.9rem; margin-top: 5px; }
@@ -86,10 +161,11 @@
 }
 .order-form-container {
   margin-top: 20px;
-  padding: 20px;
+  padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
+  font-size: 0.81rem;
 }
 .form-group {
   margin-bottom: 15px;
@@ -131,100 +207,6 @@
 .form-buttons button[type="button"]:hover {
   background-color: #d32f2f;
 }
-
-.hero-container {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-  .hero-image {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translate(-10%, -50%);
-    color: white;
-    z-index: 0; /* Ensure text stays above the image */
-  }
-  .hero-text h1 {
-    font-size: 3rem;
-  }
-  .hero-buttons {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  .hero-buttons .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.2rem 1rem;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 700;
-    border-radius: 8px;
-    transition: 0.3s;
-  }
-  .hero-buttons .button img {
-    width: 36px;
-    height: 36px;
-    margin-right: 5px;
-  }
-  .down-arrow-container {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 0;
-  }
-  .down-arrow-text {
-    color: white;
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-  .down-arrow-button {
-    display: inline-block;
-    padding: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  .down-arrow-button img {
-    width: 24px;
-    height: 24px;
-  }
-  .nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 15px;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 0;
-  }
-  .left-btn {
-    left: 20px;
-  }
-  .right-btn {
-    right: 20px;
-  }
 
   /* Breadcrumbs */
 .breadcrumb {
