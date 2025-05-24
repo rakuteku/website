@@ -178,6 +178,51 @@ nav ul li a:hover {
     color: white;
   }
 
+  /*BANNER AD*/
+  .ad-cont {
+    max-width: 1080px;
+    width: 100%;
+    margin-top: 2rem;
+    margin: 2rem auto 2rem auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 360px;
+    border-radius: 1rem;
+  }
+  .naire {background-image: url('/img/naire/naire-ad-pc.webp'); /* Default (desktop) image */}
+  .ad-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+  .ad-desc {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: right;
+    max-width: 600px;
+  }
+  .ad-link a {
+    background-color: #4daf51;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  .ad-link a:hover {
+    background-color: #fff;
+  }
+
   /*CONTENT*/
   .cont {
     display: flex;
@@ -460,6 +505,26 @@ nav ul li a:hover {
     /*HERO*/
     .hero-image {
       background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/img/cover-sumaho.png");
+    }
+
+    /*AD BANNER*/
+    .ad-cont {
+      padding: 1.5rem;
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      justify-content: start;
+    }
+    .ad-title {font-size: 1.5rem;}
+    .ad-desc {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      text-align: right;
+      max-width: 64%;
+    }
+    .naire {background-image: url('/img/naire/naire-ad-sumaho.webp'); /* Mobile image */}
+    .ad-title, .ad-desc, .ad-link {
+      text-align: right;
     }
 
     /*CONTENT*/
