@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAKUTEKU｜最安値名入れボールペン簡単注文</title>
+  <meta name="description" content="名入れボールペンの注文を承り中です。">
+  <link rel="stylesheet" href="/rakuteku.css">
+  <link rel="stylesheet" href="/prodDesc.css">
+  <link rel="stylesheet" href="/naire.css">
+  <link rel="icon" type="image/png" href="/img/logoFavIcon.png">
+</head>
+<body>
+  <!--NAVBAR-->
+  <nav style="box-shadow:none; background-color: black;">
+    <div class="logo">
+      <img src="/img/logoFavIcon.png" alt="logo" />
+      <h1>RAKUTEKU</h1>
+    </div>
+    <ul>
+      <li>
+        <a href="/" style="color:white">ホーム</a>
+      </li>
+      <li>
+        <a href="#" style="color:white">会社概要</a>
+      </li>
+      <li>
+        <a href="#shouhinIchiran" onclick="event.preventDefault(); document.getElementById('shouhinIchiran').scrollIntoView({ behavior: 'smooth' });" style="color:white">
+          商品一覧
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="openModal(); return false;" style="color:white">お問い合わせ</a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="line" style="background-color: white;"></span>
+      <span class="line" style="background-color: white;"></span>
+      <span class="line" style="background-color: white;"></span>
+    </div>
+  </nav>
+  <div class="menubar">
+    <ul>
+      <li>
+        <a href="/">ホーム</a>
+      </li>
+      <li>
+        <a href="#">会社概要</a>
+      </li>
+      <li>
+        <a href="#shouhinIchiran" onclick="event.preventDefault(); document.getElementById('shouhinIchiran').scrollIntoView({ behavior: 'smooth' });">
+          商品一覧
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="openModal(); return false;">お問い合わせ</a>
+      </li>
+    </ul>
+  </div>
+
+<!-- DETAIL -->
+<div class="naire-detail-container">
+    <div class="gallery">
+        <img id="mainImg" class="gallery-main" src="/img/naire/oem-logo-qr-desc-a.jpg" alt="商品画像" />
+        <div class="thumbnails">
+          <img src="/img/naire/oem-logo-qr-desc-a.jpg" data-full="/img/naire/oem-logo-qr-desc-a.jpg" class="active" />
+          <img src="/img/naire/oem-logo-qr-desc-b.jpg" data-full="/img/naire/oem-logo-qr-desc-b.jpg" />
+          <img src="/img/naire/oem-logo-qr-desc-c.jpg" data-full="/img/naire/oem-logo-qr-desc-c.jpg" />
+          <img src="/img/naire/oem-logo-qr-desc-d.jpg" data-full="/img/naire/oem-logo-qr-desc-d.jpg" />
+          <img src="/img/naire/oem-logo-qr-desc-e.jpg" data-full="/img/naire/oem-logo-qr-desc-e.jpg" />
+        </div>
+        <div class="info-tabs">
+          <div class="tab-headers">
+            <button class="tab-button active" data-tab="pricing">料金表</button>
+            <button class="tab-button" data-tab="product">商品説明</button>
+            <button class="tab-button" data-tab="design">デザインについて</button>
+            <button class="tab-button" data-tab="order">注文の流れ</button>
+          </div>
+          <div class="tab-content active" id="pricing">
+            <table class="tab-table">
+              <tr>
+                <th>価格(税込み)</th>
+                <td>50本 ¥9900 (@198円)<br>100本 ¥11,000 (@110円)</td>
+              </tr>
+              <tr>
+                <th>送料</th>
+                <td>※8,000円以上日本全国で送料無料</td>
+              </tr>
+            </table>
+          </div>
+          <div class="tab-content" id="product">
+            <table class="tab-table">
+              <tr>
+                <th>素材</th>
+                <td>プラスチック</td>
+              </tr>
+              <tr>
+                <th>サイズ</th>
+                <td>143mm × Φ11.3mm</td>
+              </tr>
+              <tr>
+                <th>先端の直径</th>
+                <td>0.5mm</td>
+              </tr>
+              <tr>
+                <th>本体色</th>
+                <td>黒色</td>
+              </tr>
+              <tr>
+                <th>ペンのインクの色</th>
+                <td>黒色</td>
+              </tr>
+            </table>
+          </div>
+          <div class="tab-content" id="design">
+            <table class="tab-table">
+              <tr>
+                <th>ロゴの色</th>
+                <td>
+                  １色<br/>
+                  ＊１色追加するごとに、追加料金２０００円かかります。
+                </td>
+              </tr>
+              <tr>
+                <th>ロゴ印刷の範囲</th>
+                <td>
+                  下記の写真をご確認ください<br/>
+                  <img src="/img/naire/oem-logo-qr-desc-b-crop.jpg" data-full="/img/naire/oem-logo-qr-desc-b-crop.jpg" style="max-width: 270px;"/>
+                </td>
+              </tr>
+              <tr>
+                <th>お届け日数</th>
+                <td>
+                  ２－３週間
+                  ＊注文確定後
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="tab-content" id="order">
+            <table class="tab-table">
+              <tr>
+                <th><img src="/img/naire/flow-a.png" data-full="/img/naire/flow-a.png" style="max-width: 150px;border-radius: 4px;"/></th>
+                <td>
+                  <strong>STEP 1 商品を選ぶ</strong><br/>
+                  ＊商品のスペック・本体色・インクの色をご確認ください。
+                </td>
+              </tr>
+              <tr>
+                <th><img src="/img/naire/flow-b.png" data-full="/img/naire/flow-b.png" style="max-width: 150px;border-radius: 4px;"/></th>
+                <td>
+                  <strong>STEP 2　ご注文</strong><br/>
+                  ＊このページの注文するフォームをご提出ください。<br/>
+                  ＊フォームを提出すると、自動送信メールが届きます。
+                </td>
+              </tr>
+              <tr>
+                <th><img src="/img/naire/flow-c.png" data-full="/img/naire/flow-c.png" style="max-width: 150px;border-radius: 4px;"/></th>
+                <td>
+                  <strong>STEP 3　メールでのご確認</strong><br/>
+                  ＊担当者から在庫・デザイン・ロゴなどを確認致します。<br/>
+                  ＊お支払い方法・請求書もメールで送信致します。
+                </td>
+              </tr>
+              <tr>
+                <th><img src="/img/naire/flow-d.png" data-full="/img/naire/flow-d.png" style="max-width: 150px;border-radius: 4px;"/></th>
+                <td>
+                  <strong>STEP 4　お支払い</strong><br/>
+                  ＊口座振り込み・PAYPAYにてお支払いお願い致します。
+                </td>
+              </tr>
+              <tr>
+                <th><img src="/img/naire/flow-e.png" data-full="/img/naire/flow-e.png" style="max-width: 150px;border-radius: 4px;"/></th>
+                <td>
+                  <strong>STEP 5　商品のお届け</strong><br/>
+                  ＊２－３週間ぐらいでお届け致します。
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>        
+    </div>
+    <div class="order-form" id="order-form">
+      <button type="button" id="closeFormOrderMobile" onclick="closeModalOrderMobile()">
+        × 閉じる
+      </button>
+      <h2>シムレーション・注文 </h2>
+       <!-- Hidden image URL field (add your actual image URL here) -->
+      <input type="hidden" id="productImage" name="productImage" value="https://rakuteku.com/img/naire/oem-logo-qr-desc-a.png">
+      <input type="hidden" id="productName" name="productName" value="Q1001">
+      <label for="productN">商品型番</label>
+      <input type="text" id="productN" name="productN" value="Q1001" readonly style="border:none">
+      <label for="bodyColor">本体色</label>
+      <select id="bodyColor" name="bodyColor">
+        <option value="blackBody">黒</option>
+      </select>
+      <label for="inkColor">インク色</label>
+      <select id="inkColor" name="inkColor">
+        <option value="blackInk">黒</option>
+      </select>
+      <label for="lot">ロット数</label>
+      <select id="lot" name="lot">
+        <option value="50">50本</option>
+        <option value="100">100本</option>
+      </select>
+      <p class="notice">印刷は１色です、表示される値段は送料込みです</p>
+      <p class="notice">日本全国約２～３週間でお届けします。</p>
+      <div class="totals">
+        <div><span>1本あたり(税込)</span><span id="unitPrice" class="amount">¥0</span></div>
+        <div><span>合計金額(税込)</span><span id="totalPrice" class="amount">¥0</span></div>
+        <button id="orderButton" class="order-button">注文する</button>
+      </div>
+      <!-- Order Form (hidden by default) -->
+      <div id="orderFormContainer" class="order-form-container" style="display: none;">
+        <h3>注文情報</h3>
+        <form id="orderForm" action="?" method="POST">
+          <div class="form-group">
+            <label for="name">お名前:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="emailConfirm">メールアドレス(確認):</label>
+            <input type="email" id="emailConfirm" name="emailConfirm" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">電話番号:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div id="recaptcha-container"></div>
+          <div class="form-buttons">
+            <button type="button" id="resetForm">キャンセル</button>
+            <button type="submit">送信</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--CONTACT US-->
+  <div class="floating-container" style="width: 90px;height: 75px;">
+    <button class="floating-btn" onclick="openModal()" >
+        <img src="/img/iconPhone.png" alt="Custom Icon" style="width: 36px; height: 36px;">
+        <div class="floating-text">お問い合わせ</div>
+    </button>
+  </div>
+  <div class="modal" id="modal" onclick="closeModal(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+          <span class="close-btn" onclick="closeModal(event)">X</span>
+          <h2 style="color:white">お問い合わせ</h2>
+          <div class="modal-body">
+              <div>
+                  <a href="https://line.me/ti/p/YKtb301rPt" target="_blank">
+                      <img src="/img/lineqr.jpg" alt="LINE QR Code">
+                      <p>LINE</p>
+                  </a>
+              </div>
+              <div>
+                  <a href="tel:05071088235">
+                    <img src="/img/iconPhone.png" alt="toiawaseDenwa" style="width: 42px; height:42px">
+                      <p>05071088235</p>
+                  </a>
+              </div>
+              <div>
+                  <a href="mailto:support@rakuteku.com">
+                    <img src="/img/iconEmail.png" alt="toiawaseMeru" style="width: 42px; height:42px">
+                    <p>support@rakuteku.com</p>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <!--ORDER MOBILE-->
+    <div class="floating-container-order" style="width: 90px;height: 75px;">
+      <button class="floating-btn" onclick="openModalOrder()" >
+          <img src="/img/naire/iconOrder.png" alt="Custom Icon" style="width: 36px; height: 36px;">
+          <div class="floating-text">注文</div>
+      </button>
+    </div>
+
+  <!--FOOTER-->
+  <footer>
+    <div class="row primary" style="max-width:1080px; margin: auto;">
+      <div class="column about">
+        <img src="/img/logoHorizontal.png" style="max-width: 210px; margin: auto;" alt="logo" />
+        <p>
+          ハイテクな商品を手頃な価格を提供します。
+          監視カメラ・ドローン・補聴器・OEM
+        </p>
+      </div>
+      <div class="column links">  
+        <h3>Quick Links</h3>
+        <ul>
+          <li>
+            <a href="#faq">ホーム</a>
+          </li>
+          <li>
+            <a href="#cookies-policy">会社概要
+            </a>
+          </li>
+          <li>
+            <a href="#terms-of-services">商品一覧</a>
+          </li>
+          <li>
+            <a href="#support">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column subscribe">
+        <h3>Buy Now</h3>
+        <div class="sns">
+          <a href="https://mercari-shops.com/shops/oqSNGMDBgWxRMsXs5gzrk3" target="_blank" style="cursor: pointer;"><img src="/img/qr-code-mercari-shops.png" style="max-width: 120px; margin: auto;" alt="logo" /></a>
+          <a href="https://auctions.yahoo.co.jp/seller/nqmya12351" target="_blank" style="cursor: pointer;"><img src="/img/qr-code-yahoo auction.png" style="max-width: 120px; margin: auto;" alt="logo" /></a>
+        </div>
+        <div class="social">
+          <i class="fa-brands fa-facebook-square"></i>
+          <i class="fa-brands fa-instagram-square"></i>
+          <i class="fa-brands fa-twitter-square"></i>
+        </div>
+      </div>
+    </div>
+    <div class="row secondary" style="max-width:1080px; margin: auto;">
+      <div class="custIconCont">
+          <i class="custIcon" style=" background-image: url('/img/iconPhone.png'); "></i>&nbsp;+81 050-7108-8235
+      </div>
+      <div class="custIconCont">
+        <i class="custIcon" style=" background-image: url('/img/iconEmail.png'); "></i>&nbsp;support@rakuteku.com
+      </div>
+      <div class="custIconCont">
+        <i class="custIcon" style=" background-image: url('/img/iconAddress.png'); "></i>&nbsp;札幌市中央区南５条西１５丁目２－３－５０３
+      </div>
+    </div>
+    <div class="row copyright">
+      <p>Copyright &copy; 2025 Rakuteku | All Rights Reserved</p>
+    </div>
+  </footer>
+  <script>
+    // NAVIGATION
+    const mobileNav = document.querySelector(".hamburger");
+    const navbar = document.querySelector(".menubar");
+    const toggleNav = () => {
+      navbar.classList.toggle("active");
+      mobileNav.classList.toggle("hamburger-active");
+    };
+    mobileNav?.addEventListener("click", toggleNav);
+    document.addEventListener("click", (event) => {
+      const isClickInsideMenu = navbar.contains(event.target);
+      const isClickOnHamburger = mobileNav.contains(event.target);
+      if (navbar.classList.contains("active") && !isClickInsideMenu && !isClickOnHamburger) {
+        toggleNav();
+      }
+    });
+  
+    // NAVBAR SCROLL EFFECT
+    window.addEventListener("scroll", function () {
+      const nav = document.querySelector("nav");
+      nav.classList.toggle("scrolled", window.scrollY > 50);
+    });
+  
+    // IMAGE THUMBNAILS
+    document.querySelectorAll('.thumbnails img').forEach(img => {
+      img.addEventListener('click', () => {
+        document.querySelector('.thumbnails img.active')?.classList.remove('active');
+        img.classList.add('active');
+        document.getElementById('mainImg').src = img.dataset.full;
+      });
+    });
+  
+    // PRICE CALCULATION
+    const lotEl = document.getElementById('lot');
+    const unitEl = document.getElementById('unitPrice');
+    const totalEl = document.getElementById('totalPrice');
+    function calc() {
+      const lot = Number(lotEl.value);
+      let base = (lot >= 100) ? 100 : 180;
+      const unitWithTax = Math.ceil(base * 1.099);
+      const totalWithTax = unitWithTax * lot;
+      unitEl.textContent = `¥${unitWithTax.toLocaleString()}`;
+      totalEl.textContent = `¥${totalWithTax.toLocaleString()}`;
+    }
+    lotEl.addEventListener('change', calc);
+    calc();
+  
+    // FORM HANDLING
+    const orderButton = document.getElementById('orderButton');
+    const orderFormContainer = document.getElementById('orderFormContainer');
+    const orderForm = document.getElementById('orderForm');
+    const resetFormButton = document.getElementById('resetForm');
+    orderButton?.addEventListener('click', () => {
+      orderFormContainer.style.display = 'block';
+      orderButton.style.display = 'none';
+    });
+    resetFormButton?.addEventListener('click', () => {
+      orderFormContainer.style.display = 'none';
+      orderButton.style.display = 'block';
+    });
+    let recaptchaWidgetId;
+    orderForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const emailConfirm = document.getElementById('emailConfirm').value;
+      if (email !== emailConfirm) {
+        alert('メールアドレスが一致しません');
+        return;
+      }
+      if (typeof grecaptcha === 'undefined' || recaptchaWidgetId === undefined) {
+        alert('reCAPTCHAがまだ読み込まれていません。しばらくお待ちください。');
+        return;
+      }
+      const recaptchaToken = grecaptcha.getResponse(recaptchaWidgetId);
+      if (!recaptchaToken) {
+        alert('reCAPTCHAを確認してください');
+        return;
+      }
+      const formData = {
+        product: document.getElementById('productName').value,
+        bodyColor: document.getElementById('bodyColor').value,
+        inkColor: document.getElementById('inkColor').value,
+        lot: lotEl.value,
+        totalPrice: totalEl.textContent,
+        productImage: document.getElementById('productImage').value,
+        name: document.getElementById('name').value,
+        email: email,
+        phone: document.getElementById('phone').value,
+        timestamp: new Date().toISOString(),
+        recaptchaToken: recaptchaToken
+      };
+      submitToGoogleSheets(formData);
+    });
+  
+    // GOOGLE SHEETS SUBMISSION
+    async function submitToGoogleSheets(formData) {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby6n31OHL4ksCMYLArrL6KM1_7ZIMN1PVMp26f5MbUCR79yn7K_aeOY10gYca0ws1RL8g/exec';
+    const submitBtn = document.querySelector('#orderForm [type="submit"]');
+    try {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "送信中...";
+        const response = await fetch(scriptURL, {
+          method: "POST",
+          redirect: "follow",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"  // <-- WORKAROUND for CORS
+          },
+          body: JSON.stringify(formData)
+        });
+        const result = await response.json();
+
+        if (result.status !== "success") {
+          throw new Error(result.message || "送信エラー");
+        }
+        alert('送信成功！自動送信メールが届きますので、ご確認ください。');
+        orderForm.reset();
+        orderFormContainer.style.display = 'none';
+        orderButton.style.display = 'block';
+        grecaptcha.reset();
+      } catch (error) {
+        console.error("Error:", error);
+        alert(`送信失敗: ${error.message}`);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "送信";
+      }
+    }
+  
+    // reCAPTCHA CALLBACKS
+    function onRecaptchaLoad() {
+      if (!document.getElementById('recaptcha-container')) {
+        console.error("reCAPTCHA container not found");
+        return;
+      }
+      recaptchaWidgetId = grecaptcha.render('recaptcha-container', {
+        sitekey: '6Lfw4kArAAAAAMNcWWBg1U5F7HhE8Thq2Z7sCKUz',
+        callback: onRecaptchaSuccess,
+        'expired-callback': onRecaptchaExpired
+      });
+      console.log("reCAPTCHA rendered:", recaptchaWidgetId);
+    }
+    function onRecaptchaSuccess(token) {
+      console.log("reCAPTCHA verified:", token);
+    }
+    function onRecaptchaExpired() {
+      console.log("reCAPTCHA expired");
+      grecaptcha.reset(recaptchaWidgetId);
+    }
+  </script>
+  
+  <!-- Load reCAPTCHA API (ONCE) -->
+  <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
+  
+  <!--tab-->
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
+      });
+    });
+
+    function openModal() {
+      document.getElementById("modal").style.display = "flex";
+      toggleNav();
+    }
+    function closeModal(event) {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    function openModalOrder() {
+      document.getElementById("order-form").style.display = "block";
+      toggleNav();
+    }
+    function closeModalOrderMobile() {
+      document.getElementById("order-form").style.display = "none";
+    }
+  </script>
+  
+</body>
+</html>
