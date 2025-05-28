@@ -341,7 +341,7 @@
         <i class="custIcon" style=" background-image: url('/img/iconEmail.png'); "></i>&nbsp;support@rakuteku.com
       </div>
       <div class="custIconCont">
-        <i class="custIcon" style=" background-image: url('/img/iconAddress.png'); "></i>&nbsp;札幌市中央区南５条西１５丁目２－３－５０３
+        <i class="custIcon" style=" background-image: url('/img/iconAddress.png'); "></i>&nbsp;札幌市中央区南５条西１５丁目２－３
       </div>
     </div>
     <div class="row copyright">
@@ -467,7 +467,7 @@
         orderFormContainer.style.display = 'none';
         orderButton.style.display = 'block';
         grecaptcha.reset();
-      } catch (error) {
+      } catch (error) { 
         console.error("Error:", error);
         alert(`送信失敗: ${error.message}`);
       } finally {
